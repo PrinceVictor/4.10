@@ -1,0 +1,14 @@
+1、电脑操作控制速度
+ramp.h中NORMAL_FORWARD_BACK_SPEED
+
+
+2016.12.04
+1、shoot.c中的void Shoot_Keep(void)函数 
+    解决右键开启摩擦轮问题
+修改后，只要右键按下超过1s即可开启摩擦轮。
+2、shoot.c中的void Detect_shoot(void)函数
+if( (RC_Ctl.mouse.press_r == 1) || ( Shoot_Info.shoot_flag == 1 )  )//摩擦轮
+改为		if( (RC_Ctl.mouse.press_r == 1) && ( Shoot_Info.shoot_flag == 1 )  )//摩擦轮
+2017.01.16
+3、调试接口
+usart3改为DMA接收和发送，完成上位机数据发送，观察波形，接收上位机发送数据，解析协议
