@@ -57,10 +57,10 @@
 .\objects\hit.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\math.h
 .\objects\hit.o: ..\Mylib\Task\Chassis_Control.h
 .\objects\hit.o: ..\Mylib\Task\ramp.h
+.\objects\hit.o: ..\Mylib\Referee\referee.h
 .\objects\hit.o: ..\Mylib\BSP\Shoot.h
 .\objects\hit.o: ..\Mylib\BSP\Load_motor.h
 .\objects\hit.o: ..\Mylib\Task\Motor_out.h
-.\objects\hit.o: ..\Mylib\Referee\referee.h
 .\objects\hit.o: ..\Mylib\BSP\BKP_DATA.h
 .\objects\hit.o: ..\Mylib\BSP\MyWDG.h
 .\objects\hit.o: ..\Mylib\Task\All_Config.h

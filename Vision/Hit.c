@@ -10,6 +10,7 @@ uint32_t LastTarget = 0;
 uint8_t Fetch_cnt=0,CanShootFlag=0;
 
 uint8_t Hit_rev[5] ={0};//妙算接收缓冲区
+uint8_t Hit[5] ={0};
 
 static void SelectMode(uint8_t mode);
 static void HitSDSU(uint8_t mode,uint8_t point);
@@ -153,7 +154,7 @@ int jjjjwww = 0;
 			Holder_Control(ENABLE , &Yaw_para  , &yaw_Hold_Info);//YAW
 			
 			//Holder_Motor_output(HOLDER_OUT);
-			Holder_Motor_output(0);
+			Holder_Motor_output(1);
 			
 			Chassis_Control(1);
 			Chassis_Remote_Dispack(1);
@@ -180,8 +181,8 @@ int jjjjwww = 0;
 			}	
 		else {			
 				PAout(4) = 0;//关闭激光笔
-				if((Hit_rev[0]  ==  0xAA )&&(Hit_rev[2]  ==  0xAB )){
-				HitSDSU(Hit_rev[3],Hit_rev[1]);		
+				if((Detect_Data.Hit_Flag == 1)&&(Hit[3] != 0xFF)){
+				HitSDSU(Hit[3],Hit[1]);		
 				}
 
 			}
@@ -266,16 +267,16 @@ static void SelectMode(uint8_t mode)
 					if(j==1)
 					{
 						TargetTable[0][0] = yaw_Hold_Info.can_angle;
-						TargetTable[0][1] =Pitch_Hold_Info.can_angle;					
+						TargetTable[0][1] =Pitch_Hold_Info.angle;					
 					}else if(j==2)
 					{	
 						TargetTable[4][0] = yaw_Hold_Info.can_angle;
-						TargetTable[4][1] = Pitch_Hold_Info.can_angle;					
+						TargetTable[4][1] = Pitch_Hold_Info.angle;					
 					}
 					else if(j == 3)
 					{
 						TargetTable[8][0] = yaw_Hold_Info.can_angle;
-						TargetTable[8][1] = Pitch_Hold_Info.can_angle;
+						TargetTable[8][1] = Pitch_Hold_Info.angle;
 						FetchFinish = 1;
 					}
 

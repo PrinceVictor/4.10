@@ -57,10 +57,10 @@
 .\objects\can2.o: ..\Mylib\Task\Chassis_Control.h
 .\objects\can2.o: ..\Mylib\Task\ramp.h
 .\objects\can2.o: ..\Mylib\BSP\Remote.h
+.\objects\can2.o: ..\Mylib\Referee\referee.h
 .\objects\can2.o: ..\Mylib\BSP\Shoot.h
 .\objects\can2.o: ..\Mylib\BSP\Load_motor.h
 .\objects\can2.o: ..\Mylib\Task\Motor_out.h
-.\objects\can2.o: ..\Mylib\Referee\referee.h
 .\objects\can2.o: ..\Mylib\BSP\BKP_DATA.h
 .\objects\can2.o: ..\Mylib\BSP\MyWDG.h
 .\objects\can2.o: ..\Mylib\Task\All_Config.h

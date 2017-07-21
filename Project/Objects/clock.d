@@ -58,9 +58,9 @@
 .\objects\clock.o: ..\Mylib\BSP\my_func.h
 .\objects\clock.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\math.h
 .\objects\clock.o: ..\Mylib\Task\Chassis_Control.h
+.\objects\clock.o: ..\Mylib\Referee\referee.h
 .\objects\clock.o: ..\Mylib\BSP\Load_motor.h
 .\objects\clock.o: ..\Mylib\Task\Motor_out.h
-.\objects\clock.o: ..\Mylib\Referee\referee.h
 .\objects\clock.o: ..\Mylib\BSP\BKP_DATA.h
 .\objects\clock.o: ..\Mylib\BSP\MyWDG.h
 .\objects\clock.o: ..\Mylib\Task\All_Config.h

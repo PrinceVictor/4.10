@@ -57,10 +57,10 @@
 .\objects\prepare_data.o: ..\Mylib\BSP\Remote.h
 .\objects\prepare_data.o: ..\Mylib\Task\All_Config.h
 .\objects\prepare_data.o: ..\Mylib\Task\ramp.h
+.\objects\prepare_data.o: ..\Mylib\Referee\referee.h
 .\objects\prepare_data.o: ..\Mylib\BSP\Shoot.h
 .\objects\prepare_data.o: ..\Mylib\BSP\Load_motor.h
 .\objects\prepare_data.o: ..\Mylib\Task\Motor_out.h
-.\objects\prepare_data.o: ..\Mylib\Referee\referee.h
 .\objects\prepare_data.o: ..\Mylib\BSP\BKP_DATA.h
 .\objects\prepare_data.o: ..\Mylib\BSP\MyWDG.h
 .\objects\prepare_data.o: ..\Mylib\IMU\imu.h

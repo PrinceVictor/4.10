@@ -13,14 +13,14 @@ struct PID_PARA Yaw_para;
 
 struct PID_PARA Pitch_para_6623 = 
 {
-	400, 0 , 25,  //250
-	150 , 0 , 0  //120
+	350, 0 , 25,  //250  //400
+	150 , 0 , 0  //120   //150
 }	;
 
 struct PID_PARA Yaw_para_6623 = 
 {
 	280,0,0,
-	130,0,0
+	130,0,0   //150
 };
 
 struct PID_PARA Yaw_para_6025 = 
@@ -73,7 +73,7 @@ void Holder_update_para(void)
 
 	}
 }
-int16_t componsate = -300;
+int16_t componsate = -250;
 int8_t Holder_Control(uint8_t flag , struct PID_PARA * p , struct Hold_Info * paramount)
 {
 	
@@ -141,11 +141,11 @@ void ComeToZero(uint8_t flag )
 		Holder_Motor_output(0);//Êä³öÎª0£¬½µµÍ¸ÉÈÅ
 		return;
 	}
-
+	Pitch_Hold_Info.angle = Pitch_Hold_Info.can_angle;
 	yaw_Hold_Info.angle = yaw_Hold_Info.can_angle;
 	Holder_Control(ENABLE , &Pitch_para, &Pitch_Hold_Info);//pitch
 	Holder_Control(ENABLE , &Yaw_para  , &yaw_Hold_Info);//YAW
-	Holder_Motor_output(0);
+	Holder_Motor_output(1);
 
 }
 

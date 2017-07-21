@@ -12,6 +12,7 @@
 #include "Chassis_Control.h"
 #include "ramp.h"
 #include "Remote.h"
+#include "referee.h"
 
 #define SPEED_FILTER_NUM 10
 #define SPEED_OUT_MAX 15000

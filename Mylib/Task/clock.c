@@ -9,10 +9,11 @@
 #include "Motor_out.h"
 #include "OtherConfig.h"
 #include "Wheel_Speed.h"
+#include "referee.h"
 
 void Body_Protect(uint8_t flag);
 void Mode_Change(void);
-int PowerData_flag,Last_PowerData,PowerData = 0;	
+
 int32_t clock_cnt = 0,judge_cnt=0,Powerlimit_cnt=0;
 int32_t Reset_cnt = 0;
 uint8_t Run_state = STATE_INIT,Reset_can =1;
@@ -282,10 +283,13 @@ void Mode_Change(void)
 
 void PowerData_Detect(){
 			static int32_t Power_cnt =0;
-		if(Last_PowerData != PowerData )
+	if((Judgment_01_data.power_W >= 200)||(Judgment_01_data.power_W < 0)){
+		Detect_Data.PowerData_flag = 0;
+}
+	else if(Detect_Data.Last_PowerData!= Detect_Data.PowerData )
 	{
-		PowerData_flag = 1;
-		Last_PowerData = PowerData;
+		Detect_Data.PowerData_flag = 1;
+		Detect_Data.Last_PowerData = Detect_Data.PowerData;
 		Power_cnt = 0;
 	}
 		else {
@@ -293,7 +297,7 @@ void PowerData_Detect(){
 				
 }
 		if(Power_cnt > 100){
-		PowerData_flag = 0;
+		Detect_Data.PowerData_flag = 0;
 			Power_cnt = 0;
 	}
 

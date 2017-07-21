@@ -56,10 +56,10 @@
 .\objects\chassis_control.o: ..\Mylib\Task\Chassis_Control.h
 .\objects\chassis_control.o: ..\Mylib\Task\ramp.h
 .\objects\chassis_control.o: ..\Mylib\BSP\Remote.h
+.\objects\chassis_control.o: ..\Mylib\Referee\referee.h
 .\objects\chassis_control.o: ..\Mylib\BSP\Shoot.h
 .\objects\chassis_control.o: ..\Mylib\BSP\Load_motor.h
 .\objects\chassis_control.o: ..\Mylib\Task\Motor_out.h
-.\objects\chassis_control.o: ..\Mylib\Referee\referee.h
 .\objects\chassis_control.o: ..\Mylib\BSP\BKP_DATA.h
 .\objects\chassis_control.o: ..\Mylib\BSP\MyWDG.h
 .\objects\chassis_control.o: ..\Mylib\Task\All_Config.h

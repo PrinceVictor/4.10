@@ -58,10 +58,10 @@
 .\objects\imu.o: ..\Mylib\BSP\Remote.h
 .\objects\imu.o: ..\Mylib\Task\All_Config.h
 .\objects\imu.o: ..\Mylib\Task\ramp.h
+.\objects\imu.o: ..\Mylib\Referee\referee.h
 .\objects\imu.o: ..\Mylib\BSP\Shoot.h
 .\objects\imu.o: ..\Mylib\BSP\Load_motor.h
 .\objects\imu.o: ..\Mylib\Task\Motor_out.h
-.\objects\imu.o: ..\Mylib\Referee\referee.h
 .\objects\imu.o: ..\Mylib\BSP\BKP_DATA.h
 .\objects\imu.o: ..\Mylib\BSP\MyWDG.h
 .\objects\imu.o: ..\Vision\Hit.h

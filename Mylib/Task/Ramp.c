@@ -8,9 +8,9 @@ RampTime Move_UD ;
 RampTime Move_LF ;
 
 uint16_t NORMAL_FORWARD_BACK_SPEED 	= 690;   //640
-uint16_t NORMAL_LEFT_RIGHT_SPEED   	=	600;    //600
+uint16_t NORMAL_LEFT_RIGHT_SPEED   	=	620;    //600
 const int32_t HIGH_FORWARD_BACK_SPEED 		=	650;
-const int32_t HIGH_LEFT_RIGHT_SPEED   		=	700;
+const int32_t HIGH_LEFT_RIGHT_SPEED   		=	720;
 int forward_back_speed = 0;
 int left_right_speed = 0;
 

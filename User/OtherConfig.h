@@ -29,6 +29,6 @@
 
 
 
-extern  uint16_t LaserAndPrep[4][12];
+extern const uint16_t LaserAndPrep[4][12];
 #endif
 

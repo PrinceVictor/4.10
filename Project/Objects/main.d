@@ -59,10 +59,10 @@
 .\objects\main.o: ..\Mylib\BSP\my_func.h
 .\objects\main.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\math.h
 .\objects\main.o: ..\Mylib\Task\ramp.h
+.\objects\main.o: ..\Mylib\Referee\referee.h
 .\objects\main.o: ..\Mylib\BSP\Shoot.h
 .\objects\main.o: ..\Mylib\BSP\Load_motor.h
 .\objects\main.o: ..\Mylib\Task\Motor_out.h
-.\objects\main.o: ..\Mylib\Referee\referee.h
 .\objects\main.o: ..\Mylib\BSP\BKP_DATA.h
 .\objects\main.o: ..\Mylib\BSP\MyWDG.h
 .\objects\main.o: ..\Vision\Hit.h

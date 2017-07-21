@@ -36,3 +36,5 @@
 .\objects\motor_out.o: ..\Libraries\stm32f4xx_dcmi.h
 .\objects\motor_out.o: ..\Libraries\stm32f4xx_fsmc.h
 .\objects\motor_out.o: ..\Mylib\Task\Holder.h
+.\objects\motor_out.o: ..\User\OtherConfig.h
+.\objects\motor_out.o: ..\Libraries\sys.h

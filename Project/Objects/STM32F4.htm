@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\STM32F4.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\STM32F4.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Thu Jul 20 12:49:19 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Fri Jul 21 23:20:13 2017
 <BR><P>
 <H3>Maximum Stack Usage =        528 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -487,7 +487,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[30]"></a>USART1_IRQHandler</STRONG> (Thumb, 384 bytes, Stack size 8 bytes, remote.o(.text))
+<P><STRONG><a name="[30]"></a>USART1_IRQHandler</STRONG> (Thumb, 380 bytes, Stack size 8 bytes, remote.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = USART1_IRQHandler &rArr; Computer_Control &rArr; ComputerControl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetITStatus
@@ -2068,7 +2068,7 @@ Global Symbols
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU6050_Read
 </UL>
 
-<P><STRONG><a name="[85]"></a>Attitude_update</STRONG> (Thumb, 216 bytes, Stack size 0 bytes, prepare_data.o(.text))
+<P><STRONG><a name="[85]"></a>Attitude_update</STRONG> (Thumb, 224 bytes, Stack size 0 bytes, prepare_data.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMU_update
 </UL>
 
@@ -2132,7 +2132,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM8_BRK_TIM12_IRQHandler
 </UL>
 
-<P><STRONG><a name="[128]"></a>PowerData_Detect</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, clock.o(.text))
+<P><STRONG><a name="[128]"></a>PowerData_Detect</STRONG> (Thumb, 104 bytes, Stack size 0 bytes, clock.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM8_BRK_TIM12_IRQHandler
 </UL>
 
@@ -2172,7 +2172,7 @@ Global Symbols
 <LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HitSDSU
 </UL>
 
-<P><STRONG><a name="[119]"></a>ComeToZero</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, holder.o(.text))
+<P><STRONG><a name="[119]"></a>ComeToZero</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, holder.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = ComeToZero &rArr; Holder_Motor_output &rArr; CAN_TransmitStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Holder_Motor_output
@@ -2246,7 +2246,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM8_BRK_TIM12_IRQHandler
 </UL>
 
-<P><STRONG><a name="[12e]"></a>Wheel_out</STRONG> (Thumb, 324 bytes, Stack size 56 bytes, wheel_speed.o(.text))
+<P><STRONG><a name="[12e]"></a>Wheel_out</STRONG> (Thumb, 332 bytes, Stack size 56 bytes, wheel_speed.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = Wheel_out &rArr; CAN_TransmitStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_TransmitStatus
@@ -2259,7 +2259,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Power_Circle
 </UL>
 
-<P><STRONG><a name="[131]"></a>Power_Circle</STRONG> (Thumb, 352 bytes, Stack size 4 bytes, wheel_speed.o(.text))
+<P><STRONG><a name="[131]"></a>Power_Circle</STRONG> (Thumb, 350 bytes, Stack size 4 bytes, wheel_speed.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = Power_Circle
 </UL>
 <BR>[Calls]<UL><LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wheel_out_Proccess
@@ -2267,7 +2267,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wheel_Speed_control
 </UL>
 
-<P><STRONG><a name="[79]"></a>Wheel_Speed_control</STRONG> (Thumb, 856 bytes, Stack size 40 bytes, wheel_speed.o(.text))
+<P><STRONG><a name="[79]"></a>Wheel_Speed_control</STRONG> (Thumb, 858 bytes, Stack size 40 bytes, wheel_speed.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = Wheel_Speed_control &rArr; Wheel_out &rArr; CAN_TransmitStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Power_Circle
@@ -2341,7 +2341,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ALLTASk_BooT
 </UL>
 
-<P><STRONG><a name="[71]"></a>Referee_Configuration</STRONG> (Thumb, 394 bytes, Stack size 96 bytes, referee.o(.text))
+<P><STRONG><a name="[71]"></a>Referee_Configuration</STRONG> (Thumb, 314 bytes, Stack size 96 bytes, referee.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = Referee_Configuration &rArr; USART_Init &rArr; RCC_GetClocksFreq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
@@ -2379,7 +2379,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[32]"></a>USART3_IRQHandler</STRONG> (Thumb, 134 bytes, Stack size 8 bytes, referee.o(.text))
+<P><STRONG><a name="[32]"></a>USART3_IRQHandler</STRONG> (Thumb, 230 bytes, Stack size 8 bytes, referee.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = USART3_IRQHandler &rArr; USART_GetITStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetITStatus
@@ -2429,7 +2429,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendtoReferee
 </UL>
 
-<P><STRONG><a name="[64]"></a>SendtoReferee</STRONG> (Thumb, 118 bytes, Stack size 8 bytes, referee.o(.text))
+<P><STRONG><a name="[64]"></a>SendtoReferee</STRONG> (Thumb, 202 bytes, Stack size 8 bytes, referee.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = SendtoReferee &rArr; Append_CRC8_Check_Sum &rArr; Get_CRC8_Check_Sum
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Append_CRC8_Check_Sum
@@ -2438,7 +2438,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[141]"></a>Verify_CRC8_Check_Sum</STRONG> (Thumb, 132 bytes, Stack size 16 bytes, referee.o(.text), UNUSED)
+<P><STRONG><a name="[141]"></a>Verify_CRC8_Check_Sum</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, referee.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_CRC8_Check_Sum
 </UL>
 
@@ -2991,7 +2991,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PrepareForIMU
 </UL>
 
-<P><STRONG><a name="[113]"></a>KalmanFilter_x</STRONG> (Thumb, 380 bytes, Stack size 104 bytes, prepare_data.o(.text))
+<P><STRONG><a name="[113]"></a>KalmanFilter_x</STRONG> (Thumb, 384 bytes, Stack size 104 bytes, prepare_data.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = KalmanFilter_x &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub

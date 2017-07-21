@@ -37,7 +37,7 @@ extern struct RC_Ctl_key RC_Key;
 extern float TargetTable[9][2];
 
 extern uint8_t Hit_rev[5];
-
+extern uint8_t Hit[5];
 extern uint8_t HitMode;
 
 static void Manual_Hit();

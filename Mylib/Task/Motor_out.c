@@ -1,5 +1,6 @@
 #include "Motor_out.h"
 #include "Holder.h"
+#include "OtherConfig.h"
 //2016.4.17
 
 int16_t yaw_paramount = 0;
@@ -57,9 +58,23 @@ int8_t Holder_Motor_output(int8_t flag )
 
 	//转换到int16类型，方便后续CAN发送
 
-	pitch_out_s16 = (int16_t)Pitch_Hold_Info.out;
-	yaw_out_s16 = -(int16_t)yaw_Hold_Info.out;
+
 	
+	if(  TANK_SERIAL_NUMBER == 2){
+	pitch_out_s16 = -(int16_t)Pitch_Hold_Info.out;
+	yaw_out_s16 = (int16_t)yaw_Hold_Info.out;
+
+}
+	else if(  TANK_SERIAL_NUMBER == 3){
+	pitch_out_s16 = -(int16_t)Pitch_Hold_Info.out;
+	yaw_out_s16 = -(int16_t)yaw_Hold_Info.out;
+
+}
+	else {
+		pitch_out_s16 = (int16_t)Pitch_Hold_Info.out;
+		yaw_out_s16 = -(int16_t)yaw_Hold_Info.out;
+
+}
 //	pitch_out_s16 = 0;
 //		yaw_out_s16 = 0;
 	//Pitch轴限幅

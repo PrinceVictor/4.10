@@ -56,10 +56,10 @@
 .\objects\remote.o: ..\Mylib\IMU\Prepare_data.h
 .\objects\remote.o: ..\Mylib\BSP\my_func.h
 .\objects\remote.o: ..\Mylib\Task\Chassis_Control.h
+.\objects\remote.o: ..\Mylib\Referee\referee.h
 .\objects\remote.o: ..\Mylib\BSP\Shoot.h
 .\objects\remote.o: ..\Mylib\BSP\Load_motor.h
 .\objects\remote.o: ..\Mylib\Task\Motor_out.h
-.\objects\remote.o: ..\Mylib\Referee\referee.h
 .\objects\remote.o: ..\Mylib\BSP\BKP_DATA.h
 .\objects\remote.o: ..\Mylib\BSP\MyWDG.h
 .\objects\remote.o: ..\Mylib\Task\All_Config.h

@@ -74,9 +74,9 @@ void Wheel_Info_Init(void)
 	}
 	else
 	{
-		Four_Wheel_Info.out_limit =5300;
+		Four_Wheel_Info.out_limit =5400;
 		Four_Wheel_Info.speed_limit = 1900;
-		Four_Wheel_Info.speed_K = 0.023f;
+		Four_Wheel_Info.speed_K = 0.024f;
 	}
 
 }
@@ -101,8 +101,8 @@ void Wheel_Info_Update(){
 							Four_Wheel_Info.speed_K = 0.023f;
 						}
 						
-						NORMAL_FORWARD_BACK_SPEED 	= 640;   //640
-						NORMAL_LEFT_RIGHT_SPEED   	=	600; 
+						NORMAL_FORWARD_BACK_SPEED 	= 690;   //640
+						NORMAL_LEFT_RIGHT_SPEED   	=	620; 
 }
 		
 			else{
@@ -118,8 +118,8 @@ void Wheel_Info_Update(){
 					Four_Wheel_Info.speed_limit = 1900;
 					Four_Wheel_Info.speed_K = 0.023f;
 				}
-				NORMAL_FORWARD_BACK_SPEED 	= 680;   //640
-				NORMAL_LEFT_RIGHT_SPEED   	=	600; 
+				NORMAL_FORWARD_BACK_SPEED 	= 690;   //640
+				NORMAL_LEFT_RIGHT_SPEED   	=	620; 
 }
 }
 }
@@ -322,7 +322,7 @@ uint8_t Wheel_Speed_control(uint8_t flag)
 		}
 		else	
 		{
-			p_part = ( Wheel_para.shell_P ) * 0.1f * delta_b *0.7f;//P PART 缩小10倍
+			p_part = ( Wheel_para.shell_P ) * 0.1f * delta_b *0.8f;//P PART 缩小10倍
 		}
 	
 		
@@ -346,7 +346,7 @@ uint8_t Wheel_Speed_control(uint8_t flag)
 
 		Four_Wheel_Info.out[wheel_cnt] = Wheel_dead_bias(DISABLE , out , 200);//增加电机偏置
 	}			/***********功率半闭环*************/
-	Power_Circle(PowerData_flag,Judgment_01_data.power_W,Judgment_01_data.remainJ);
+	Power_Circle(Detect_Data.PowerData_flag,Judgment_01_data.power_W,Judgment_01_data.remainJ);
 	
 	for( wheel_cnt = 0;wheel_cnt<4;wheel_cnt++ ){
 			/*(3)输出限幅*/
@@ -403,30 +403,39 @@ void Wheel_out_Proccess(float multiple){
 
 
 }
-
+float Power_P_Increase = 0.01f,Power_P_Derease = 0.018f;
 void Power_Circle(int flag, float real_power, float reman_J ){
-	int8_t wheel_cnt;
-	static float Power_P = 10;
+
+ 
 	float delta,delta_out;
 	
 	if(flag == 0){
-		return ;
-}
-  delta = (80 - real_power) * 10;
+	
+}	
+else{
+  delta = (80 - real_power)*10 ;
+//	if(delta >= 0)  {
+//		delta_out = Power_P_Increase * delta + 1.0f ;
+//	}
+//	else if(delta < 0){
+//		delta_out = 1.0f + Power_P_Derease * delta ;
+//}
+//	Wheel_out_Proccess(delta_out);
+#if 1
 if(delta >= 0){
 
 
  if(delta > 600){
-		Wheel_out_Proccess(1.45f);
+		Wheel_out_Proccess(1.5f);
 }
 else if(delta > 500){
-		Wheel_out_Proccess(1.35f);
+		Wheel_out_Proccess(1.4f);
 }
 else if(delta > 400){
-		Wheel_out_Proccess(1.25f);
+		Wheel_out_Proccess(1.3f);
 }
 else if(delta > 300){
-		Wheel_out_Proccess(1.15f);
+		Wheel_out_Proccess(1.2f);
 }
 else if(delta > 200){
 		Wheel_out_Proccess(1.1f);
@@ -459,6 +468,9 @@ else if(delta < -100){
 else{
 		Wheel_out_Proccess(0.55f);
 }
+}
+
+#endif
 }
 }
 

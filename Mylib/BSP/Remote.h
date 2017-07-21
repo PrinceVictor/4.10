@@ -9,8 +9,8 @@
 #define LEFT_LIMINT_ANGLE 20.0f //云台左侧角度限制
 #define RIGHT_LIMINT_ANGLE -20.0f//云台右侧角度限制
 
-#define PITCH_NEGTIVE_LIMIT_ANGLE -8.5f		//云台上方角度限制
-#define PITCH_POSITIVE_LIMIT_ANGLE 22.5f		//云台下方角度限制
+#define PITCH_NEGTIVE_LIMIT_ANGLE -8.0f		//云台上方角度限制
+#define PITCH_POSITIVE_LIMIT_ANGLE 23.0f		//云台下方角度限制
 
 
 #define LEFT_CHESSIS_LIMIT 25.0f //底盘左边限制
