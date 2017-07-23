@@ -43,27 +43,27 @@
 .\objects\boottask.o: ..\Mylib\IMU\I2C.h
 .\objects\boottask.o: ..\Mylib\IMU\6050.h
 .\objects\boottask.o: ..\Mylib\Task\clock.h
-.\objects\boottask.o: ..\Mylib\Task\Wheel_Speed.h
+.\objects\boottask.o: ..\Mylib\Referee\referee.h
 .\objects\boottask.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\stdio.h
+.\objects\boottask.o: ..\Mylib\Task\clock.h
+.\objects\boottask.o: ..\Mylib\Task\ramp.h
+.\objects\boottask.o: ..\Mylib\BSP\shoot.h
+.\objects\boottask.o: ..\Vision\Hit.h
+.\objects\boottask.o: ..\Mylib\BSP\Remote.h
+.\objects\boottask.o: ..\Mylib\Task\Chassis_Control.h
 .\objects\boottask.o: ..\Mylib\IMU\Prepare_data.h
 .\objects\boottask.o: ..\Mylib\Task\Holder.h
 .\objects\boottask.o: ..\User\OtherConfig.h
 .\objects\boottask.o: ..\User\main.h
 .\objects\boottask.o: ..\Mylib\BSP\BootTask.h
-.\objects\boottask.o: ..\Mylib\BSP\Remote.h
-.\objects\boottask.o: ..\Mylib\Referee\referee.h
 .\objects\boottask.o: ..\Mylib\IMU\Imu.h
 .\objects\boottask.o: ..\Mylib\Task\Chassis_Control.h
-.\objects\boottask.o: ..\Mylib\IMU\Prepare_data.h
 .\objects\boottask.o: ..\Mylib\Task\Wheel_Speed.h
-.\objects\boottask.o: ..\Mylib\Task\All_Config.h
 .\objects\boottask.o: ..\Mylib\BSP\my_func.h
 .\objects\boottask.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\math.h
-.\objects\boottask.o: ..\Mylib\Task\ramp.h
-.\objects\boottask.o: ..\Mylib\BSP\Shoot.h
-.\objects\boottask.o: ..\Mylib\BSP\Load_motor.h
+.\objects\boottask.o: ..\Mylib\Task\All_Config.h
+.\objects\boottask.o: ..\Vision\Hit_calculation.h
 .\objects\boottask.o: ..\Mylib\Task\Motor_out.h
+.\objects\boottask.o: ..\Mylib\BSP\Load_motor.h
 .\objects\boottask.o: ..\Mylib\BSP\BKP_DATA.h
 .\objects\boottask.o: ..\Mylib\BSP\MyWDG.h
-.\objects\boottask.o: ..\Vision\Hit.h
-.\objects\boottask.o: ..\Vision\Hit_calculation.h

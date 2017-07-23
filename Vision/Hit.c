@@ -134,7 +134,6 @@ static void HitSDSU_Key_scan(uint8_t flag)
 int jjjjwww = 0;
  static void HitSDSU_Pro(uint8_t flag)
 {
-	static uint32_t iiiwww = 0;
 //	static uint32_t jjjjwww = 0;
 	
 	if( flag == 0 )
@@ -165,18 +164,9 @@ int jjjjwww = 0;
 		{				
 			if(ManualMode){
 				PAout(4) = 1;
+				
 				Manual_Hit();
-//				iiiwww++;
-//				if(iiiwww > 2000)
-//				{
-//					jjjjwww++;
-//					iiiwww = 1;
-//					jjjjwww = jjjjwww%10;
-//					if(jjjjwww == 0)
-//					{
-//						jjjjwww = 1;
-//					}
-//				}
+
 				HitSDSU(jjjjwww,jjjjwww);		
 			}	
 		else {			
@@ -222,7 +212,7 @@ static void HitSDSU(uint8_t mode,uint8_t point)
   {
 		
 
-  }else
+  }else if(Shoot_Info.load_command  == 1)
   {
 
     Load_Motor_position_plus(LaserAndPrep[TANK_SERIAL_NUMBER-1][4]);

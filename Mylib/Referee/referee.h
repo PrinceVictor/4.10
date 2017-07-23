@@ -68,26 +68,34 @@ typedef struct
 	uint8_t AddDefendPrecent;  
 }_JUDGMENT_04_DATA;
 
-typedef struct
+struct _SEND_DIY_DATA
 {
 	float data1;
 	float data2;
 	float data3;
   
-}_SEND_DIY_DATA;
+};
 
-typedef struct
+struct _FunctionDetect_DATA
 {
 int PowerData_flag;   //裁判系统信息检测
 int Last_PowerData;
 int PowerData;	
-uint16_t Hit_Flag;   //大幅信息检测
+uint8_t Hit_Flag;   //大幅信息检测
+uint8_t Hit_Identify_Flag;
 uint8_t Hit_count;
 uint8_t Load_motor_Flag;    //拨弹电机信息检测
 uint8_t Load_motor_detect_Flag;
 uint8_t Shoot_motor_Flag;   //摩擦轮信息检测
+uint8_t MyColor;
+uint8_t Data_trans_Flag;
+uint8_t ResourceIsland_status;	
+uint8_t RedAirPortSta;
+uint8_t BlueAirPortSta;
+uint8_t BigRune0status;
+uint8_t BigRune1status;	
   
-}_FunctionDetect_DATA;
+};
 
 void New_Send_Data(uint8_t *data,uint16_t size);
 void Referee_Configuration(void);
@@ -95,8 +103,9 @@ void Mainfold_Receive_Configuration(void);
 extern _JUDGMENT_01_DATA Judgment_01_data;
 extern _JUDGMENT_02_DATA Judgment_02_data;
 extern _JUDGMENT_03_DATA Judgment_03_data;
-extern _FunctionDetect_DATA Detect_Data;
-extern _SEND_DIY_DATA send_diy_data;
+extern struct _FunctionDetect_DATA Detect_Data;
+extern struct _SEND_DIY_DATA UserDefineData;
+
 extern uint8_t Tx_Buf[TX_LEN];
 extern uint8_t re_data[TX_LEN]; 
 extern unsigned char Get_CRC8_Check_Sum(unsigned char *,unsigned int,unsigned char );

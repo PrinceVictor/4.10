@@ -44,26 +44,26 @@
 .\objects\main.o: ..\Mylib\IMU\I2C.h
 .\objects\main.o: ..\Mylib\IMU\6050.h
 .\objects\main.o: ..\Mylib\Task\clock.h
-.\objects\main.o: ..\Mylib\Task\Wheel_Speed.h
+.\objects\main.o: ..\Mylib\Referee\referee.h
 .\objects\main.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\stdio.h
+.\objects\main.o: ..\Mylib\Task\clock.h
+.\objects\main.o: ..\Mylib\Task\ramp.h
+.\objects\main.o: ..\Mylib\BSP\shoot.h
+.\objects\main.o: ..\Vision\Hit.h
+.\objects\main.o: ..\Mylib\BSP\Remote.h
+.\objects\main.o: ..\Mylib\Task\Chassis_Control.h
 .\objects\main.o: ..\Mylib\IMU\Prepare_data.h
 .\objects\main.o: ..\Mylib\Task\Holder.h
 .\objects\main.o: ..\User\OtherConfig.h
 .\objects\main.o: ..\User\main.h
 .\objects\main.o: ..\Mylib\IMU\Imu.h
 .\objects\main.o: ..\Mylib\Task\Chassis_Control.h
-.\objects\main.o: ..\Mylib\IMU\Prepare_data.h
 .\objects\main.o: ..\Mylib\Task\Wheel_Speed.h
-.\objects\main.o: ..\Mylib\BSP\Remote.h
-.\objects\main.o: ..\Mylib\Task\All_Config.h
 .\objects\main.o: ..\Mylib\BSP\my_func.h
 .\objects\main.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\math.h
-.\objects\main.o: ..\Mylib\Task\ramp.h
-.\objects\main.o: ..\Mylib\Referee\referee.h
-.\objects\main.o: ..\Mylib\BSP\Shoot.h
-.\objects\main.o: ..\Mylib\BSP\Load_motor.h
+.\objects\main.o: ..\Mylib\Task\All_Config.h
+.\objects\main.o: ..\Vision\Hit_calculation.h
 .\objects\main.o: ..\Mylib\Task\Motor_out.h
+.\objects\main.o: ..\Mylib\BSP\Load_motor.h
 .\objects\main.o: ..\Mylib\BSP\BKP_DATA.h
 .\objects\main.o: ..\Mylib\BSP\MyWDG.h
-.\objects\main.o: ..\Vision\Hit.h
-.\objects\main.o: ..\Vision\Hit_calculation.h

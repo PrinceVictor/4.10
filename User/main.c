@@ -41,6 +41,7 @@ int main(void)
 			
 		/***********ต๗สิ************/
 		cnt++;
+		
 		#if 1   
 		if(cnt > 50 ){
 		SendtoReferee(Send_data);

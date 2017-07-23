@@ -51,18 +51,19 @@
 .\objects\ramp.o: ..\Mylib\BSP\led.h
 .\objects\ramp.o: ..\Mylib\BSP\CAN2.h
 .\objects\ramp.o: ..\Mylib\Task\clock.h
+.\objects\ramp.o: ..\Mylib\Referee\referee.h
+.\objects\ramp.o: ..\Mylib\Task\clock.h
+.\objects\ramp.o: ..\Mylib\BSP\shoot.h
+.\objects\ramp.o: ..\Vision\Hit.h
+.\objects\ramp.o: ..\Mylib\Task\Chassis_Control.h
+.\objects\ramp.o: ..\Vision\Hit_calculation.h
+.\objects\ramp.o: ..\Mylib\Task\Motor_out.h
 .\objects\ramp.o: ..\Mylib\Task\Wheel_Speed.h
 .\objects\ramp.o: ..\Mylib\IMU\Prepare_data.h
 .\objects\ramp.o: ..\Mylib\BSP\my_func.h
 .\objects\ramp.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\math.h
-.\objects\ramp.o: ..\Mylib\Task\Chassis_Control.h
-.\objects\ramp.o: ..\Mylib\Referee\referee.h
-.\objects\ramp.o: ..\Mylib\BSP\Shoot.h
 .\objects\ramp.o: ..\Mylib\BSP\Load_motor.h
-.\objects\ramp.o: ..\Mylib\Task\Motor_out.h
 .\objects\ramp.o: ..\Mylib\BSP\BKP_DATA.h
 .\objects\ramp.o: ..\Mylib\BSP\MyWDG.h
 .\objects\ramp.o: ..\Mylib\Task\All_Config.h
 .\objects\ramp.o: ..\Mylib\IMU\imu.h
-.\objects\ramp.o: ..\Vision\Hit.h
-.\objects\ramp.o: ..\Vision\Hit_calculation.h

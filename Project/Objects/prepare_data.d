@@ -47,22 +47,23 @@
 .\objects\prepare_data.o: ..\Mylib\BSP\led.h
 .\objects\prepare_data.o: ..\Mylib\BSP\CAN2.h
 .\objects\prepare_data.o: ..\Mylib\Task\clock.h
-.\objects\prepare_data.o: ..\Mylib\Task\Wheel_Speed.h
+.\objects\prepare_data.o: ..\Mylib\Referee\referee.h
 .\objects\prepare_data.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\stdio.h
+.\objects\prepare_data.o: ..\Mylib\Task\clock.h
+.\objects\prepare_data.o: ..\Mylib\Task\ramp.h
+.\objects\prepare_data.o: ..\Mylib\BSP\shoot.h
+.\objects\prepare_data.o: ..\Vision\Hit.h
+.\objects\prepare_data.o: ..\Mylib\BSP\Remote.h
+.\objects\prepare_data.o: ..\Mylib\Task\Chassis_Control.h
 .\objects\prepare_data.o: ..\Mylib\IMU\Prepare_data.h
+.\objects\prepare_data.o: ..\Mylib\Task\Wheel_Speed.h
 .\objects\prepare_data.o: ..\Mylib\BSP\my_func.h
 .\objects\prepare_data.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\math.h
 .\objects\prepare_data.o: ..\Mylib\Task\Chassis_Control.h
-.\objects\prepare_data.o: ..\Mylib\Task\Wheel_Speed.h
-.\objects\prepare_data.o: ..\Mylib\BSP\Remote.h
 .\objects\prepare_data.o: ..\Mylib\Task\All_Config.h
-.\objects\prepare_data.o: ..\Mylib\Task\ramp.h
-.\objects\prepare_data.o: ..\Mylib\Referee\referee.h
-.\objects\prepare_data.o: ..\Mylib\BSP\Shoot.h
-.\objects\prepare_data.o: ..\Mylib\BSP\Load_motor.h
+.\objects\prepare_data.o: ..\Vision\Hit_calculation.h
 .\objects\prepare_data.o: ..\Mylib\Task\Motor_out.h
+.\objects\prepare_data.o: ..\Mylib\BSP\Load_motor.h
 .\objects\prepare_data.o: ..\Mylib\BSP\BKP_DATA.h
 .\objects\prepare_data.o: ..\Mylib\BSP\MyWDG.h
 .\objects\prepare_data.o: ..\Mylib\IMU\imu.h
-.\objects\prepare_data.o: ..\Vision\Hit.h
-.\objects\prepare_data.o: ..\Vision\Hit_calculation.h

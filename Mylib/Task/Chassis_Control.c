@@ -142,9 +142,9 @@ void Anaconda(uint8_t flag)
 void Lets_Rock(uint8_t flag)
 {
 	static uint32_t cnt = 0;
-	int16_t time_ms = 400;
+	int16_t time_ms = 300;
 	
-	float angle = 40.0f;
+	float angle = 38.0f;
 	
 	float k ;
 		
@@ -189,7 +189,7 @@ void Lets_Rock(uint8_t flag)
 
 void Angle_Attack(){
 	float k = 0;
-	float angle = 40;
+	float angle = 35;
 	
 	
 	k = angle / 50;

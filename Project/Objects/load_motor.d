@@ -41,3 +41,31 @@
 .\objects\load_motor.o: ..\User\OtherConfig.h
 .\objects\load_motor.o: ..\Libraries\sys.h
 .\objects\load_motor.o: ..\Mylib\BSP\delay.h
+.\objects\load_motor.o: ..\Mylib\Referee\referee.h
+.\objects\load_motor.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\stdio.h
+.\objects\load_motor.o: ..\Mylib\Task\clock.h
+.\objects\load_motor.o: ..\Mylib\Referee\referee.h
+.\objects\load_motor.o: ..\Mylib\Task\ramp.h
+.\objects\load_motor.o: ..\Vision\Hit.h
+.\objects\load_motor.o: ..\Mylib\Task\Chassis_Control.h
+.\objects\load_motor.o: ..\Mylib\IMU\Prepare_data.h
+.\objects\load_motor.o: ..\Mylib\IMU\6050.h
+.\objects\load_motor.o: ..\Mylib\IMU\I2C.h
+.\objects\load_motor.o: ..\User\main.h
+.\objects\load_motor.o: ..\Mylib\BSP\BootTask.h
+.\objects\load_motor.o: ..\Mylib\BSP\sys.h
+.\objects\load_motor.o: ..\Mylib\BSP\led.h
+.\objects\load_motor.o: ..\Mylib\BSP\CAN2.h
+.\objects\load_motor.o: ..\Mylib\Task\clock.h
+.\objects\load_motor.o: ..\Mylib\Task\Wheel_Speed.h
+.\objects\load_motor.o: ..\Mylib\IMU\Prepare_data.h
+.\objects\load_motor.o: ..\Mylib\BSP\my_func.h
+.\objects\load_motor.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\math.h
+.\objects\load_motor.o: ..\Mylib\Task\Chassis_Control.h
+.\objects\load_motor.o: ..\Mylib\Task\Motor_out.h
+.\objects\load_motor.o: ..\Mylib\BSP\BKP_DATA.h
+.\objects\load_motor.o: ..\Mylib\BSP\MyWDG.h
+.\objects\load_motor.o: ..\Mylib\Task\All_Config.h
+.\objects\load_motor.o: ..\Mylib\IMU\imu.h
+.\objects\load_motor.o: ..\Vision\Hit.h
+.\objects\load_motor.o: ..\Vision\Hit_calculation.h

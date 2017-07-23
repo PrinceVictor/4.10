@@ -1,4 +1,4 @@
-#include "referee.h"
+ #include "referee.h"
 #include "math.h"
 #include "Hit.h"
 //#include "Define.h"
@@ -13,8 +13,8 @@ _JUDGMENT_02_DATA Judgment_02_data;
 _JUDGMENT_03_DATA Judgment_03_data;
 _JUDGMENT_04_DATA Judgment_04_data;
 
-_FunctionDetect_DATA Detect_Data;	
-_SEND_DIY_DATA  UserDefineData;
+struct _FunctionDetect_DATA Detect_Data;	
+struct _SEND_DIY_DATA  UserDefineData;
 
 //WAU:where are u?
 float temp_V,temp_A,temp_W,temp_J,temp_ss,temp_sf,temp_bs,temp_bf;
@@ -99,14 +99,14 @@ void Mainfold_Receive_Configuration(void){
     DMA_Init(DMA1_Stream6, &DMA_InitStructure);
     
 		NVIC_InitStructure.NVIC_IRQChannel = USART2_IRQn;  //TIM3ÖÐ¶Ï
-		NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;  //ÏÈÕ¼ÓÅÏÈ¼¶0¼¶
-		NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;  //´ÓÓÅÏÈ¼¶3¼¶
+		NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;  //ÏÈÕ¼ÓÅÏÈ¼¶0¼¶
+		NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;  //´ÓÓÅÏÈ¼¶3¼¶
 		NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE; //IRQÍ¨µÀ±»Ê¹ÄÜ
 		NVIC_Init(&NVIC_InitStructure);  //³õÊ¼»¯NVIC¼Ä´æÆ÷
     
     NVIC_InitStructure.NVIC_IRQChannel = DMA1_Stream6_IRQn;  
     NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;  
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;  
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;  
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
     NVIC_Init(&NVIC_InitStructure); 
 
@@ -263,6 +263,7 @@ void USART3_IRQHandler(void)
       //ÊÓ¾ßÌåÐ­Òé¶ø¶
 			if((Hit_rev[0]  ==  0xAA )&&(Hit_rev[2]  ==  0xAB )){
 				Hit[1] = Hit_rev[1];
+				Detect_Data.Hit_Identify_Flag = 1;
 				if(Hit_rev[3] == 0x0A){
 				Hit[3] = Hit_rev[1];
 					
@@ -274,6 +275,11 @@ void USART3_IRQHandler(void)
 				Detect_Data.Hit_count = 0;
 }
 				}
+				
+				else if(Hit_rev[1] == 0xFF){
+
+				Detect_Data.Hit_Identify_Flag = 0;
+			}
 
 				Detect_Data.Hit_Flag = 1;
 				}        
@@ -385,27 +391,41 @@ void USART2_IRQHandler(void)
 				
 				case 0x04:{
 					          
-					Judgment_04_data.Robot_Color = (meta_data[7]&0x3);
-					Judgment_04_data.Red_Base_Robot_status = (meta_data[7]&0x0C)>>2;
-					Judgment_04_data.Blue_Base_Robot_status = (meta_data[7]&0x30)>>4;
+					Judgment_04_data.Robot_Color = (meta_data[7]&0x01);
+					
+					Detect_Data.MyColor = Judgment_04_data.Robot_Color;
+					
+					Judgment_04_data.Red_Base_Robot_status = (meta_data[7]&0x04)>>2;
+					Judgment_04_data.Blue_Base_Robot_status = (meta_data[7]&0x10)>>4;
 					Judgment_04_data.ResourceIsland_status = (meta_data[7]&0xC0)>>6;
-					Judgment_04_data.RedAirPortSta = (meta_data[8]&0x0F);
-					Judgment_04_data.BlueAirPortSta = (meta_data[8]&0xF0)>>4;
-					Judgment_04_data.No1PillarSta = (meta_data[9]&0x0F);
-					Judgment_04_data.No2PillarSta = (meta_data[9]&0xF0)>>4;
-					Judgment_04_data.No3PillarSta = (meta_data[10]&0x0F);
-					Judgment_04_data.No4PillarSta = (meta_data[10]&0xF0)>>4;
-					Judgment_04_data.No5PillarSta = (meta_data[11]&0x0F);
-					Judgment_04_data.No6PillarSta = (meta_data[11]&0xF0)>>4;
-					Judgment_04_data.RedBulletBoxSta = (meta_data[12]&0x0F);
-					Judgment_04_data.BlueBulletBoxSta = (meta_data[12]&0xF0)>>4;
+					
+					Detect_Data.ResourceIsland_status = Judgment_04_data.ResourceIsland_status;
+					
+					Judgment_04_data.RedAirPortSta = (meta_data[8]&0x07);
+					Judgment_04_data.BlueAirPortSta = (meta_data[8]&0x70)>>4;
+					
+					Detect_Data.RedAirPortSta = Judgment_04_data.RedAirPortSta;
+					Detect_Data.BlueAirPortSta = Judgment_04_data.BlueAirPortSta;
+					
+					Judgment_04_data.No1PillarSta = (meta_data[9]&0x07);
+					Judgment_04_data.No2PillarSta = (meta_data[9]&0x70)>>4;
+					Judgment_04_data.No3PillarSta = (meta_data[10]&0x07);
+					Judgment_04_data.No4PillarSta = (meta_data[10]&0x70)>>4;
+					Judgment_04_data.No5PillarSta = (meta_data[11]&0x07);
+					Judgment_04_data.No6PillarSta = (meta_data[11]&0x70)>>4;
+					Judgment_04_data.RedBulletBoxSta = (meta_data[12]&0x1);
+					Judgment_04_data.BlueBulletBoxSta = (meta_data[12]&0x10)>>4;
 					Judgment_04_data.RedBulletAmount = (meta_data[13]&0xFF);
 					Judgment_04_data.RedBulletAmount = (meta_data[14]&0xFF)<<8;
 					Judgment_04_data.BlueBulletAmount = (meta_data[15]&0xFF);
 					Judgment_04_data.BlueBulletAmount = (meta_data[16]&0xFF)<<8;
-					Judgment_04_data.No0BigRuneSta = (meta_data[17]&0x0F);
-					Judgment_04_data.No1BigRuneSta = (meta_data[17]&0xF0)>>4;
-					Judgment_04_data.No1BigRuneSta = (meta_data[18]&0xFF);
+					Judgment_04_data.No0BigRuneSta = (meta_data[17]&0x07);
+					Judgment_04_data.No1BigRuneSta = (meta_data[17]&0x70)>>4;
+				
+					Detect_Data.BigRune0status = Judgment_04_data.No0BigRuneSta;
+					Detect_Data.BigRune1status = Judgment_04_data.No1BigRuneSta;
+					
+					Judgment_04_data.AddDefendPrecent = (meta_data[18]&0xFF);
 
 
 

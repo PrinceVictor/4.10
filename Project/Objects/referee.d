@@ -38,7 +38,9 @@
 .\objects\referee.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\stdio.h
 .\objects\referee.o: ..\Mylib\Task\clock.h
 .\objects\referee.o: ..\Libraries\sys.h
-.\objects\referee.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\math.h
+.\objects\referee.o: ..\Mylib\Referee\referee.h
+.\objects\referee.o: ..\Mylib\Task\ramp.h
+.\objects\referee.o: ..\Mylib\BSP\shoot.h
 .\objects\referee.o: ..\Vision\Hit.h
 .\objects\referee.o: ..\Mylib\BSP\Remote.h
 .\objects\referee.o: ..\Mylib\Task\Chassis_Control.h
@@ -53,12 +55,12 @@
 .\objects\referee.o: ..\Mylib\BSP\sys.h
 .\objects\referee.o: ..\Mylib\BSP\led.h
 .\objects\referee.o: ..\Mylib\BSP\CAN2.h
+.\objects\referee.o: ..\Mylib\Task\clock.h
 .\objects\referee.o: ..\Mylib\Task\Wheel_Speed.h
 .\objects\referee.o: ..\Mylib\IMU\Prepare_data.h
 .\objects\referee.o: ..\Mylib\BSP\my_func.h
+.\objects\referee.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\math.h
 .\objects\referee.o: ..\Mylib\Task\Chassis_Control.h
-.\objects\referee.o: ..\Mylib\Task\ramp.h
-.\objects\referee.o: ..\Mylib\BSP\Shoot.h
 .\objects\referee.o: ..\Mylib\BSP\Load_motor.h
 .\objects\referee.o: ..\Mylib\Task\Motor_out.h
 .\objects\referee.o: ..\Mylib\BSP\BKP_DATA.h

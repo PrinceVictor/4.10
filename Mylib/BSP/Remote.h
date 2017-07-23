@@ -6,8 +6,8 @@
 #define YAW_SENSITY 0.050f		//鼠标yaw轴灵敏度
 #define PITCH_SENSITY 0.03f	//鼠标pitch轴灵敏度
 
-#define LEFT_LIMINT_ANGLE 20.0f //云台左侧角度限制
-#define RIGHT_LIMINT_ANGLE -20.0f//云台右侧角度限制
+#define LEFT_LIMINT_ANGLE 40.0f //云台左侧角度限制
+#define RIGHT_LIMINT_ANGLE -40.0f//云台右侧角度限制
 
 #define PITCH_NEGTIVE_LIMIT_ANGLE -8.0f		//云台上方角度限制
 #define PITCH_POSITIVE_LIMIT_ANGLE 23.0f		//云台下方角度限制

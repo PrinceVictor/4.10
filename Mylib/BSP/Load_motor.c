@@ -4,14 +4,11 @@
 #include "Remote.h"
 #include "OtherConfig.h"
 #include "delay.h"
+#include "referee.h"
 
 void Load_Motor_Error_Out(void);
 
 
-struct PID_PARA Load_motor_para_Mainfold = 
-{
-	230,0,0,35,0,0
-};
 
 struct PID_PARA Load_motor = 
 {
@@ -194,25 +191,30 @@ void Load_motor_control(uint8_t flag , uint8_t type)
 		
 			shell_delta = Shoot_Info.pulse_target - Shoot_Info.pulse_cnt;
 				
-			Shoot_Info.shell_out = shell_delta * Load_motor_para_Mainfold.core_P / 1000.0f;//0.002f;
+			Shoot_Info.shell_out = shell_delta * Load_motor.core_P / 1000.0f;//0.002f;
 			
 			if( Shoot_Info.shell_out > 1.0f )//限制电机速度
 			{Shoot_Info.shell_out = 1.0f;}
 			
 			delta = Shoot_Info.shell_out - Shoot_Info.Load_Motor_Speed;
-			
-			p_part = delta * 5.0f * Load_motor_para_Mainfold.shell_P;//Load_motor_para.shell_P;
 		}
 		
 		//speed circle
 		else
 		{
 			delta = Shoot_Info.Load_Motor_Speed_Target - Shoot_Info.Load_Motor_Speed;
+			
+			if((delta > 1)&&(Shoot_Info.load_command  == 1)&&((RC_Ctl.mouse.press_l == 1)||(RC_Ctl.rc.s1 == 1)))  {
+				Detect_Data.Load_motor_detect_Flag = 0;
+			}
+			else{
+				Detect_Data.Load_motor_detect_Flag = 1;
+			}
 		
-
+}
 		p_part = delta * 5.0f * Load_motor.shell_P;//Load_motor_para.shell_P;
 		
-		}
+		
 		if( p_part <0  )
 		{
 			p_part = 0;

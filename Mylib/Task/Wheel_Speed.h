@@ -42,7 +42,7 @@ struct Wheel_Info
 	float Target_speed[4];
 	float Target_speed_Old[4];
 	float Target_speed_New[4];
-	
+	float out_new[4];
 	float out[4];
 	float speed_limit;
 	float out_limit;
@@ -60,7 +60,7 @@ void Wheel_out(uint8_t out_mode , float * speed_list );
 void Wheel_Info_Init(void);
 void Wheel_Info_Update(void);
 void Wheel_para_update(void);
-void Power_Circle(int, float ,float);
+void Power_Circle(uint8_t, uint8_t, float ,float);
 //void Power_Peak_Process(uint8_t , int , int8_t , int16_t ,int16_t	);
 
 #endif

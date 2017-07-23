@@ -36,12 +36,14 @@
 .\objects\clock.o: ..\Libraries\stm32f4xx_dac.h
 .\objects\clock.o: ..\Libraries\stm32f4xx_dcmi.h
 .\objects\clock.o: ..\Libraries\stm32f4xx_fsmc.h
+.\objects\clock.o: ..\Mylib\Referee\referee.h
+.\objects\clock.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\stdio.h
+.\objects\clock.o: ..\Mylib\Task\clock.h
 .\objects\clock.o: ..\Mylib\Task\ramp.h
 .\objects\clock.o: ..\Mylib\BSP\shoot.h
 .\objects\clock.o: ..\Vision\Hit.h
 .\objects\clock.o: ..\Mylib\BSP\Remote.h
 .\objects\clock.o: ..\Mylib\Task\Chassis_Control.h
-.\objects\clock.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\stdio.h
 .\objects\clock.o: ..\Mylib\IMU\Prepare_data.h
 .\objects\clock.o: ..\Mylib\IMU\6050.h
 .\objects\clock.o: ..\Mylib\IMU\I2C.h
@@ -58,7 +60,6 @@
 .\objects\clock.o: ..\Mylib\BSP\my_func.h
 .\objects\clock.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\math.h
 .\objects\clock.o: ..\Mylib\Task\Chassis_Control.h
-.\objects\clock.o: ..\Mylib\Referee\referee.h
 .\objects\clock.o: ..\Mylib\BSP\Load_motor.h
 .\objects\clock.o: ..\Mylib\Task\Motor_out.h
 .\objects\clock.o: ..\Mylib\BSP\BKP_DATA.h

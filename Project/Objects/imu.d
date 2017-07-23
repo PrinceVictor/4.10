@@ -37,7 +37,14 @@
 .\objects\imu.o: ..\Libraries\stm32f4xx_dac.h
 .\objects\imu.o: ..\Libraries\stm32f4xx_dcmi.h
 .\objects\imu.o: ..\Libraries\stm32f4xx_fsmc.h
-.\objects\imu.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\math.h
+.\objects\imu.o: ..\Mylib\Referee\referee.h
+.\objects\imu.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\stdio.h
+.\objects\imu.o: ..\Mylib\Task\clock.h
+.\objects\imu.o: ..\Mylib\Task\ramp.h
+.\objects\imu.o: ..\Mylib\BSP\shoot.h
+.\objects\imu.o: ..\Vision\Hit.h
+.\objects\imu.o: ..\Mylib\BSP\Remote.h
+.\objects\imu.o: ..\Mylib\Task\Chassis_Control.h
 .\objects\imu.o: ..\Mylib\IMU\Prepare_data.h
 .\objects\imu.o: ..\Mylib\IMU\6050.h
 .\objects\imu.o: ..\Mylib\IMU\I2C.h
@@ -50,19 +57,14 @@
 .\objects\imu.o: ..\Mylib\BSP\led.h
 .\objects\imu.o: ..\Mylib\BSP\CAN2.h
 .\objects\imu.o: ..\Mylib\Task\Wheel_Speed.h
-.\objects\imu.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\stdio.h
 .\objects\imu.o: ..\Mylib\IMU\Prepare_data.h
 .\objects\imu.o: ..\Mylib\BSP\my_func.h
+.\objects\imu.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\math.h
 .\objects\imu.o: ..\Mylib\Task\Chassis_Control.h
-.\objects\imu.o: ..\Mylib\Task\Wheel_Speed.h
-.\objects\imu.o: ..\Mylib\BSP\Remote.h
-.\objects\imu.o: ..\Mylib\Task\All_Config.h
-.\objects\imu.o: ..\Mylib\Task\ramp.h
-.\objects\imu.o: ..\Mylib\Referee\referee.h
-.\objects\imu.o: ..\Mylib\BSP\Shoot.h
 .\objects\imu.o: ..\Mylib\BSP\Load_motor.h
 .\objects\imu.o: ..\Mylib\Task\Motor_out.h
 .\objects\imu.o: ..\Mylib\BSP\BKP_DATA.h
 .\objects\imu.o: ..\Mylib\BSP\MyWDG.h
+.\objects\imu.o: ..\Mylib\Task\All_Config.h
 .\objects\imu.o: ..\Vision\Hit.h
 .\objects\imu.o: ..\Vision\Hit_calculation.h

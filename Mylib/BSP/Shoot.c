@@ -3,6 +3,7 @@
 #include "Remote.h"
 #include "OtherConfig.h"
 #include "Load_motor.h"
+#include "referee.h"
 
 struct SHOOT_INFO Shoot_Info;
 	
@@ -78,6 +79,7 @@ void Detect_shoot(void)
 			Shoot_Fire(LaserAndPrep[TANK_SERIAL_NUMBER-1][8]);
 		
 			Shoot_Info.load_command = 1;
+			
 		}
 		else
 		{

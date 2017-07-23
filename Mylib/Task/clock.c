@@ -1,22 +1,16 @@
 #include "clock.h"
-#include "ramp.h"
-#include "shoot.h"
-#include "Hit.h"
-#include "Holder.h"
-#include "Load_motor.h"
-#include "Remote.h"
-#include "Chassis_Control.h"
-#include "Motor_out.h"
-#include "OtherConfig.h"
-#include "Wheel_Speed.h"
-#include "referee.h"
+
+
 
 void Body_Protect(uint8_t flag);
 void Mode_Change(void);
 
-int32_t clock_cnt = 0,judge_cnt=0,Powerlimit_cnt=0;
+
+int32_t clock_cnt = 0;
 int32_t Reset_cnt = 0;
-uint8_t Run_state = STATE_INIT,Reset_can =1;
+uint8_t Diy_cnt = 0,Reset_can =1;
+uint8_t Run_state = STATE_INIT;
+
 //uint8_t Run_state = STATE_RUN;
 
 int32_t mpu_cnt = 0;
@@ -65,6 +59,7 @@ void Clock_Int_Init(void)
 	
 }
 //
+
 void TIM8_BRK_TIM12_IRQHandler(void)
 {	
 	if(TIM_GetITStatus(TIM12,TIM_IT_Update)==SET) //
@@ -81,6 +76,8 @@ void TIM8_BRK_TIM12_IRQHandler(void)
 		RampTLF.clock_cnt++;
 		Move_UD.clock_cnt++;
 		Move_LF.clock_cnt++;
+		
+		Diy_cnt++;
 		
 #if 0		 //调试使用 正常使用关闭 避免占用资源
 		/****************************************/
@@ -102,6 +99,9 @@ void TIM8_BRK_TIM12_IRQHandler(void)
 		Detect_Cap();//弹仓检测
 		
 		PowerData_Detect();
+		
+		Diy_Data_Proccess( Detect_Data ,&UserDefineData);
+		
 		if( Shoot_Info.Call_cnt >= 10 )//10ms调用一次送弹电机控制
 		{	
 			Shoot_Info.Call_cnt = 0;
@@ -119,7 +119,13 @@ void TIM8_BRK_TIM12_IRQHandler(void)
 			clock_cnt = 0;
 			
 			PCout(1) = ~PCout(1);
-		}	
+		}
+
+		if(Diy_cnt > 250){
+			
+			Diy_cnt  = 0;
+			Detect_Data.Data_trans_Flag  = LED0;
+}
 
 }
 }
@@ -178,6 +184,7 @@ void ControlTask(uint8_t flag)
 			if(RC_Ctl.key.v & 0x0010)
 			{
 				Anaconda(1);
+	
 			}
 			else if((RC_Ctl.key.v & 0x4000)&&(RC_Ctl.key.v & 0x0020))
 			{
@@ -278,6 +285,60 @@ void Mode_Change(void)
 		IsComputerControl = 0;
 	}
 		
+}
+	/****个位 变数 确定数据时候上传成功
+			 十位 拨弹电机是否正常
+			 百位 摩擦轮
+			 千位 妙算数据接收
+
+	***/
+void Diy_Data_Proccess(struct _FunctionDetect_DATA  Diy_data , struct _SEND_DIY_DATA  * Send_data){
+	
+
+	
+	Diy_data.Shoot_motor_Flag = Shoot_Info.load_command;
+	
+	Send_data->data3 = Diy_data.Shoot_motor_Flag * 10  + \
+	
+	Diy_data.Hit_Flag * 100 + Diy_data.Hit_Identify_Flag * 1000 + 10000 + Diy_data.Data_trans_Flag ;
+	
+	if(Diy_data.MyColor == 0){
+		
+		if((Diy_data.BigRune0status == 0x03)||(Diy_data.BigRune1status == 0x03)){
+			
+		Send_data->data1 = 1;
+
+}
+		else {
+			
+		Send_data->data1 = 0;
+		
+}
+		if(Diy_data.BlueAirPortSta == 0x03)  Send_data->data2 = 1;
+		else Send_data->data2 = 0;
+}
+	else if(Diy_data.MyColor == 1){
+		
+			if((Diy_data.BigRune0status == 0x02)||(Diy_data.BigRune1status == 0x02)){
+				
+			Send_data->data1 = 1;
+}
+		else {
+			
+			Send_data->data1 = 0;
+
+}
+
+		if(Diy_data.RedAirPortSta == 0x03)  Send_data->data2 = 1;
+		else Send_data->data2 = 0;
+
+
+}	
+	
+	
+	
+
+
 }
 
 

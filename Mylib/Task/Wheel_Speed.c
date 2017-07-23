@@ -19,7 +19,7 @@ struct PID_PARA Wheel_para_old =
 //新电调比旧电调输出小，参数相应增大
 struct PID_PARA Wheel_para_new = 
 {
-	70,0.05f,0,//0.2f
+	60,0.05f,0,//0.2f
 	0,0,0
 };
 
@@ -82,6 +82,50 @@ void Wheel_Info_Init(void)
 }
 
 void Wheel_Info_Update(){
+	
+	if(Detect_Data.PowerData_flag == 1){
+		if (IsComputerControl == 1)//键鼠控制 
+			{
+				if(RC_Ctl.key.v & 0x0020)
+					{
+						if ( LaserAndPrep[TANK_SERIAL_NUMBER-1][11] == NEW)
+							{
+								Four_Wheel_Info.out_limit = 4200;
+								Four_Wheel_Info.speed_limit = 1900;
+								Four_Wheel_Info.speed_K = 0.023f;   //0.023
+								
+
+							}
+						else
+						{
+							Four_Wheel_Info.out_limit = 4200;
+							Four_Wheel_Info.speed_limit = 1900;
+							Four_Wheel_Info.speed_K = 0.023f;
+						}
+						
+						NORMAL_FORWARD_BACK_SPEED 	= 600;   //640
+						NORMAL_LEFT_RIGHT_SPEED   	=	540; 
+}
+		
+			else{
+				if ( LaserAndPrep[TANK_SERIAL_NUMBER-1][11] == NEW)
+				{
+					Four_Wheel_Info.out_limit = 5300;
+					Four_Wheel_Info.speed_limit = 1900;
+					Four_Wheel_Info.speed_K = 0.023f;   //0.023
+				}
+				else
+				{
+					Four_Wheel_Info.out_limit =5400;
+					Four_Wheel_Info.speed_limit = 1900;
+					Four_Wheel_Info.speed_K = 0.023f;
+				}
+				NORMAL_FORWARD_BACK_SPEED 	= 680;   //640
+				NORMAL_LEFT_RIGHT_SPEED   	=	620; 
+			}
+}
+}
+	else{
 		if (IsComputerControl == 1)//键鼠控制 
 			{
 				if(RC_Ctl.key.v & 0x0020)
@@ -101,11 +145,11 @@ void Wheel_Info_Update(){
 							Four_Wheel_Info.speed_K = 0.023f;
 						}
 						
-						NORMAL_FORWARD_BACK_SPEED 	= 690;   //640
-						NORMAL_LEFT_RIGHT_SPEED   	=	620; 
+						NORMAL_FORWARD_BACK_SPEED 	= 600;   //640
+						NORMAL_LEFT_RIGHT_SPEED   	=	540; 
 }
 		
-			else{
+			else{           
 				if ( LaserAndPrep[TANK_SERIAL_NUMBER-1][11] == NEW)
 				{
 					Four_Wheel_Info.out_limit = 5300;
@@ -118,8 +162,10 @@ void Wheel_Info_Update(){
 					Four_Wheel_Info.speed_limit = 1900;
 					Four_Wheel_Info.speed_K = 0.023f;
 				}
-				NORMAL_FORWARD_BACK_SPEED 	= 690;   //640
-				NORMAL_LEFT_RIGHT_SPEED   	=	620; 
+				NORMAL_FORWARD_BACK_SPEED 	= 640;   //640
+				NORMAL_LEFT_RIGHT_SPEED   	=	600; 
+			}
+
 }
 }
 }
@@ -322,7 +368,7 @@ uint8_t Wheel_Speed_control(uint8_t flag)
 		}
 		else	
 		{
-			p_part = ( Wheel_para.shell_P ) * 0.1f * delta_b *0.8f;//P PART 缩小10倍
+			p_part = ( Wheel_para.shell_P ) * 0.1f * delta_b *0.75f;//P PART 缩小10倍
 		}
 	
 		
@@ -346,7 +392,7 @@ uint8_t Wheel_Speed_control(uint8_t flag)
 
 		Four_Wheel_Info.out[wheel_cnt] = Wheel_dead_bias(DISABLE , out , 200);//增加电机偏置
 	}			/***********功率半闭环*************/
-	Power_Circle(Detect_Data.PowerData_flag,Judgment_01_data.power_W,Judgment_01_data.remainJ);
+	Power_Circle(wheel_cnt ,Detect_Data.PowerData_flag,Judgment_01_data.power_W,Judgment_01_data.remainJ);
 	
 	for( wheel_cnt = 0;wheel_cnt<4;wheel_cnt++ ){
 			/*(3)输出限幅*/
@@ -403,25 +449,44 @@ void Wheel_out_Proccess(float multiple){
 
 
 }
-float Power_P_Increase = 0.01f,Power_P_Derease = 0.018f;
-void Power_Circle(int flag, float real_power, float reman_J ){
+float Power_P_Increase = 0.0008f,Power_P_Derease = 0.0013f,Power_P = 1.05f,bas =8;
+void Power_Circle(uint8_t wheel_cnt ,uint8_t flag, float real_power, float reman_J ){
 
  
 	float delta,delta_out;
 	
 	if(flag == 0){
 	
-}	
+}
+
 else{
-  delta = (80 - real_power)*10 ;
-//	if(delta >= 0)  {
-//		delta_out = Power_P_Increase * delta + 1.0f ;
-//	}
-//	else if(delta < 0){
-//		delta_out = 1.0f + Power_P_Derease * delta ;
-//}
-//	Wheel_out_Proccess(delta_out);
+	
+#if 0
+	if(Four_Wheel_Info.out[wheel_cnt] > 0 ){
+	delta = Four_Wheel_Info.out[wheel_cnt] - real_power * bas;
+	
+	delta_out  = delta * Power_P ;
+	}
+	else if(Four_Wheel_Info.out[wheel_cnt] < 0){
+	delta = Four_Wheel_Info.out[wheel_cnt] +  real_power * bas ;
+	
+	delta_out  = delta * Power_P;
+}
+	Four_Wheel_Info.out_new[wheel_cnt] = delta_out;
+	Four_Wheel_Info.out[wheel_cnt] = Four_Wheel_Info.out_new[wheel_cnt];
+#endif	
 #if 1
+	 delta = (80 - real_power)*10 ;
+	if(delta >= 0)  {
+		delta_out = Power_P_Increase * delta + 1.0f ;
+	}
+	else if(delta < 0){
+		delta_out = 0.95f + Power_P_Derease * delta ;
+}
+	Wheel_out_Proccess(delta_out);
+
+#endif
+#if 0
 if(delta >= 0){
 
 

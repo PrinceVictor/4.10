@@ -40,3 +40,32 @@
 .\objects\shoot.o: ..\User\OtherConfig.h
 .\objects\shoot.o: ..\Libraries\sys.h
 .\objects\shoot.o: ..\Mylib\BSP\Load_motor.h
+.\objects\shoot.o: ..\Mylib\Referee\referee.h
+.\objects\shoot.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\stdio.h
+.\objects\shoot.o: ..\Mylib\Task\clock.h
+.\objects\shoot.o: ..\Mylib\Referee\referee.h
+.\objects\shoot.o: ..\Mylib\Task\ramp.h
+.\objects\shoot.o: ..\Vision\Hit.h
+.\objects\shoot.o: ..\Mylib\Task\Chassis_Control.h
+.\objects\shoot.o: ..\Mylib\IMU\Prepare_data.h
+.\objects\shoot.o: ..\Mylib\IMU\6050.h
+.\objects\shoot.o: ..\Mylib\IMU\I2C.h
+.\objects\shoot.o: ..\Mylib\Task\Holder.h
+.\objects\shoot.o: ..\User\main.h
+.\objects\shoot.o: ..\Mylib\BSP\delay.h
+.\objects\shoot.o: ..\Mylib\BSP\BootTask.h
+.\objects\shoot.o: ..\Mylib\BSP\led.h
+.\objects\shoot.o: ..\Mylib\BSP\CAN2.h
+.\objects\shoot.o: ..\Mylib\Task\clock.h
+.\objects\shoot.o: ..\Mylib\Task\Wheel_Speed.h
+.\objects\shoot.o: ..\Mylib\IMU\Prepare_data.h
+.\objects\shoot.o: ..\Mylib\BSP\my_func.h
+.\objects\shoot.o: C:\Program Files (x86)\MDK\ARM\ARMCC\bin\..\include\math.h
+.\objects\shoot.o: ..\Mylib\Task\Chassis_Control.h
+.\objects\shoot.o: ..\Mylib\Task\Motor_out.h
+.\objects\shoot.o: ..\Mylib\BSP\BKP_DATA.h
+.\objects\shoot.o: ..\Mylib\BSP\MyWDG.h
+.\objects\shoot.o: ..\Mylib\Task\All_Config.h
+.\objects\shoot.o: ..\Mylib\IMU\imu.h
+.\objects\shoot.o: ..\Vision\Hit.h
+.\objects\shoot.o: ..\Vision\Hit_calculation.h
