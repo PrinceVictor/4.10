@@ -118,9 +118,9 @@ void Wheel_Info_Update(){
 				{
 					Four_Wheel_Info.out_limit =5400;
 					Four_Wheel_Info.speed_limit = 1900;
-					Four_Wheel_Info.speed_K = 0.023f;
+					Four_Wheel_Info.speed_K = 0.024f;
 				}
-				NORMAL_FORWARD_BACK_SPEED 	= 680;   //640
+				NORMAL_FORWARD_BACK_SPEED 	= 700;   //640
 				NORMAL_LEFT_RIGHT_SPEED   	=	620; 
 			}
 }
@@ -392,8 +392,8 @@ uint8_t Wheel_Speed_control(uint8_t flag)
 
 		Four_Wheel_Info.out[wheel_cnt] = Wheel_dead_bias(DISABLE , out , 200);//增加电机偏置
 	}			/***********功率半闭环*************/
-	Power_Circle(wheel_cnt ,Detect_Data.PowerData_flag,Judgment_01_data.power_W,Judgment_01_data.remainJ);
-	
+		Power_Circle(wheel_cnt ,Detect_Data.PowerData_flag,Judgment_01_data.power_W,Judgment_01_data.remainJ);
+//	
 	for( wheel_cnt = 0;wheel_cnt<4;wheel_cnt++ ){
 			/*(3)输出限幅*/
 		if( Four_Wheel_Info.out[wheel_cnt]  > Four_Wheel_Info.out_limit )
@@ -449,7 +449,7 @@ void Wheel_out_Proccess(float multiple){
 
 
 }
-float Power_P_Increase = 0.0008f,Power_P_Derease = 0.0013f,Power_P = 1.05f,bas =8;
+float Power_P_Increase = 0.0085f,Power_P_Derease = 0.013f,Power_P = 1.05f,bas =8,divide =3,delta11111;
 void Power_Circle(uint8_t wheel_cnt ,uint8_t flag, float real_power, float reman_J ){
 
  
@@ -460,15 +460,17 @@ void Power_Circle(uint8_t wheel_cnt ,uint8_t flag, float real_power, float reman
 }
 
 else{
-	
+	delta = (75 - real_power);
 #if 0
 	if(Four_Wheel_Info.out[wheel_cnt] > 0 ){
-	delta = Four_Wheel_Info.out[wheel_cnt] - real_power * bas;
+	delta = Four_Wheel_Info.out[wheel_cnt] / divide- real_power * bas;
 	
 	delta_out  = delta * Power_P ;
+		
+	delta11111 = delta;
 	}
 	else if(Four_Wheel_Info.out[wheel_cnt] < 0){
-	delta = Four_Wheel_Info.out[wheel_cnt] +  real_power * bas ;
+	delta = Four_Wheel_Info.out[wheel_cnt] / divide +  real_power * bas ;
 	
 	delta_out  = delta * Power_P;
 }
@@ -476,7 +478,7 @@ else{
 	Four_Wheel_Info.out[wheel_cnt] = Four_Wheel_Info.out_new[wheel_cnt];
 #endif	
 #if 1
-	 delta = (80 - real_power)*10 ;
+	 
 	if(delta >= 0)  {
 		delta_out = Power_P_Increase * delta + 1.0f ;
 	}

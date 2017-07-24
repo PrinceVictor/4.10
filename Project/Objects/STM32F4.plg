@@ -8,6 +8,86 @@ Project File Date:  07/09/2017
 
 <h2>Output:</h2>
 Build target 'STM32F4'
+compiling OtherConfig.c...
+linking...
+Program Size: Code=43140 RO-data=1972 RW-data=660 ZI-data=3292  
+FromELF: creating hex file...
+".\Objects\STM32F4.axf" - 0 Errors, 0 Warning(s).
+Load "E:\\ROBOMASTERS\\自制板\\新步兵车4.10\\Project\\Objects\\STM32F4.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'STM32F4'
+compiling OtherConfig.c...
+linking...
+Program Size: Code=43140 RO-data=1972 RW-data=660 ZI-data=3292  
+FromELF: creating hex file...
+".\Objects\STM32F4.axf" - 0 Errors, 0 Warning(s).
+Build target 'STM32F4'
+compiling OtherConfig.c...
+linking...
+Program Size: Code=43140 RO-data=1972 RW-data=660 ZI-data=3292  
+FromELF: creating hex file...
+".\Objects\STM32F4.axf" - 0 Errors, 0 Warning(s).
+Build target 'STM32F4'
+linking...
+Program Size: Code=43140 RO-data=1972 RW-data=660 ZI-data=3292  
+FromELF: creating hex file...
+".\Objects\STM32F4.axf" - 0 Errors, 0 Warning(s).
+Build target 'STM32F4'
+compiling clock.c...
+..\Mylib\Task\Chassis_Control.h(54): warning:  #1295-D: Deprecated declaration SoftReset - give arg types
+..\Mylib\Task\Chassis_Control.h(55): warning:  #1295-D: Deprecated declaration Angle_Attack - give arg types
+..\Vision\Hit.h(43): warning:  #1295-D: Deprecated declaration Manual_Hit - give arg types
+compiling Hit.c...
+..\Mylib\Task\Chassis_Control.h(54): warning:  #1295-D: Deprecated declaration SoftReset - give arg types
+..\Mylib\Task\Chassis_Control.h(55): warning:  #1295-D: Deprecated declaration Angle_Attack - give arg types
+..\Vision\Hit.h(43): warning:  #1295-D: Deprecated declaration Manual_Hit - give arg types
+..\Vision\Hit.c(199): warning:  #177-D: variable "pitch_temp" was declared but never referenced
+linking...
+Program Size: Code=43140 RO-data=1972 RW-data=660 ZI-data=3292  
+FromELF: creating hex file...
+".\Objects\STM32F4.axf" - 0 Errors, 7 Warning(s).
+Load "E:\\ROBOMASTERS\\自制板\\新步兵车4.10\\Project\\Objects\\STM32F4.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'STM32F4'
+compiling Wheel_Speed.c...
+..\Mylib\Task\Chassis_Control.h(54): warning:  #1295-D: Deprecated declaration SoftReset - give arg types
+..\Mylib\Task\Chassis_Control.h(55): warning:  #1295-D: Deprecated declaration Angle_Attack - give arg types
+..\Vision\Hit.h(43): warning:  #1295-D: Deprecated declaration Manual_Hit - give arg types
+..\Mylib\Task\Wheel_Speed.c(306): warning:  #940-D: missing return statement at end of non-void function "A_Law"
+..\Mylib\Task\Wheel_Speed.c(288): warning:  #177-D: variable "point" was declared but never referenced
+..\Mylib\Task\Wheel_Speed.c(317): warning:  #177-D: variable "i" was declared but never referenced
+..\Mylib\Task\Wheel_Speed.c(319): warning:  #177-D: variable "sum" was declared but never referenced
+..\Mylib\Task\Wheel_Speed.c(286): warning:  #177-D: function "A_Law" was declared but never referenced
+linking...
+Program Size: Code=43132 RO-data=1972 RW-data=660 ZI-data=3292  
+FromELF: creating hex file...
+".\Objects\STM32F4.axf" - 0 Errors, 8 Warning(s).
+Build target 'STM32F4'
+compiling Wheel_Speed.c...
+..\Mylib\Task\Chassis_Control.h(54): warning:  #1295-D: Deprecated declaration SoftReset - give arg types
+..\Mylib\Task\Chassis_Control.h(55): warning:  #1295-D: Deprecated declaration Angle_Attack - give arg types
+..\Vision\Hit.h(43): warning:  #1295-D: Deprecated declaration Manual_Hit - give arg types
+..\Mylib\Task\Wheel_Speed.c(306): warning:  #940-D: missing return statement at end of non-void function "A_Law"
+..\Mylib\Task\Wheel_Speed.c(288): warning:  #177-D: variable "point" was declared but never referenced
+..\Mylib\Task\Wheel_Speed.c(317): warning:  #177-D: variable "i" was declared but never referenced
+..\Mylib\Task\Wheel_Speed.c(319): warning:  #177-D: variable "sum" was declared but never referenced
+..\Mylib\Task\Wheel_Speed.c(286): warning:  #177-D: function "A_Law" was declared but never referenced
+linking...
+Program Size: Code=43132 RO-data=1972 RW-data=660 ZI-data=3292  
+FromELF: creating hex file...
+".\Objects\STM32F4.axf" - 0 Errors, 8 Warning(s).
+Load "E:\\ROBOMASTERS\\自制板\\新步兵车4.10\\Project\\Objects\\STM32F4.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'STM32F4'
 compiling main.c...
 ..\Mylib\Task\Chassis_Control.h(54): warning:  #1295-D: Deprecated declaration SoftReset - give arg types
 ..\Mylib\Task\Chassis_Control.h(55): warning:  #1295-D: Deprecated declaration Angle_Attack - give arg types
@@ -95,41 +175,47 @@ compiling Hit.c...
 ..\Vision\Hit.h(43): warning:  #1295-D: Deprecated declaration Manual_Hit - give arg types
 ..\Vision\Hit.c(199): warning:  #177-D: variable "pitch_temp" was declared but never referenced
 linking...
-Program Size: Code=43132 RO-data=1972 RW-data=652 ZI-data=3292  
+Program Size: Code=43116 RO-data=1972 RW-data=660 ZI-data=3292  
 FromELF: creating hex file...
 ".\Objects\STM32F4.axf" - 0 Errors, 68 Warning(s).
 Build target 'STM32F4'
-compiling OtherConfig.c...
-linking...
-Program Size: Code=43132 RO-data=1972 RW-data=652 ZI-data=3292  
-FromELF: creating hex file...
-".\Objects\STM32F4.axf" - 0 Errors, 0 Warning(s).
-Build target 'STM32F4'
-compiling Ramp.c...
-..\Vision\Hit.h(43): warning:  #1295-D: Deprecated declaration Manual_Hit - give arg types
+compiling clock.c...
 ..\Mylib\Task\Chassis_Control.h(54): warning:  #1295-D: Deprecated declaration SoftReset - give arg types
 ..\Mylib\Task\Chassis_Control.h(55): warning:  #1295-D: Deprecated declaration Angle_Attack - give arg types
+..\Vision\Hit.h(43): warning:  #1295-D: Deprecated declaration Manual_Hit - give arg types
+compiling Hit.c...
+..\Mylib\Task\Chassis_Control.h(54): warning:  #1295-D: Deprecated declaration SoftReset - give arg types
+..\Mylib\Task\Chassis_Control.h(55): warning:  #1295-D: Deprecated declaration Angle_Attack - give arg types
+..\Vision\Hit.h(43): warning:  #1295-D: Deprecated declaration Manual_Hit - give arg types
+..\Vision\Hit.c(199): warning:  #177-D: variable "pitch_temp" was declared but never referenced
 linking...
-Program Size: Code=43132 RO-data=1972 RW-data=652 ZI-data=3292  
+Program Size: Code=43116 RO-data=1972 RW-data=660 ZI-data=3292  
 FromELF: creating hex file...
-".\Objects\STM32F4.axf" - 0 Errors, 3 Warning(s).
+".\Objects\STM32F4.axf" - 0 Errors, 7 Warning(s).
 Build target 'STM32F4'
 linking...
-Program Size: Code=43132 RO-data=1972 RW-data=652 ZI-data=3292  
+Program Size: Code=43116 RO-data=1972 RW-data=660 ZI-data=3292  
 FromELF: creating hex file...
 ".\Objects\STM32F4.axf" - 0 Errors, 0 Warning(s).
 Load "E:\\ROBOMASTERS\\自制板\\新步兵车4.10\\Project\\Objects\\STM32F4.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
 Build target 'STM32F4'
+compiling clock.c...
+..\Mylib\Task\Chassis_Control.h(54): warning:  #1295-D: Deprecated declaration SoftReset - give arg types
+..\Mylib\Task\Chassis_Control.h(55): warning:  #1295-D: Deprecated declaration Angle_Attack - give arg types
+..\Vision\Hit.h(43): warning:  #1295-D: Deprecated declaration Manual_Hit - give arg types
+compiling Hit.c...
+..\Mylib\Task\Chassis_Control.h(54): warning:  #1295-D: Deprecated declaration SoftReset - give arg types
+..\Mylib\Task\Chassis_Control.h(55): warning:  #1295-D: Deprecated declaration Angle_Attack - give arg types
+..\Vision\Hit.h(43): warning:  #1295-D: Deprecated declaration Manual_Hit - give arg types
+..\Vision\Hit.c(199): warning:  #177-D: variable "pitch_temp" was declared but never referenced
 linking...
-Program Size: Code=43132 RO-data=1972 RW-data=652 ZI-data=3292  
+Program Size: Code=43116 RO-data=1972 RW-data=660 ZI-data=3292  
 FromELF: creating hex file...
-".\Objects\STM32F4.axf" - 0 Errors, 0 Warning(s).
-Load "E:\\ROBOMASTERS\\自制板\\新步兵车4.10\\Project\\Objects\\STM32F4.axf" 
-Build target 'STM32F4'
-linking...
-Program Size: Code=43132 RO-data=1972 RW-data=652 ZI-data=3292  
-FromELF: creating hex file...
-".\Objects\STM32F4.axf" - 0 Errors, 0 Warning(s).
+".\Objects\STM32F4.axf" - 0 Errors, 7 Warning(s).
 Load "E:\\ROBOMASTERS\\自制板\\新步兵车4.10\\Project\\Objects\\STM32F4.axf" 
 Erase Done.
 Programming Done.
