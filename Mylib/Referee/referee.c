@@ -266,7 +266,7 @@ void USART3_IRQHandler(void)
 				Detect_Data.Hit_Identify_Flag = 1;
 				if(Hit_rev[3] == 0x0A){
 				Hit[3] = Hit_rev[1];
-					
+				Detect_Data.Hit_cnt++;	
 }
 				else if(Hit_rev[3] == 0x14){
 				Detect_Data.Hit_count++;

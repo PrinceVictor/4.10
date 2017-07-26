@@ -114,7 +114,7 @@ void Shoot_Info_Init(void)
 {
 	uint8_t i;
 	
-		Shoot_Info.Load_Motor_Speed_Target = 1.2f;
+		Shoot_Info.Load_Motor_Speed_Target = 1.1f;
 		Shoot_Info.pulse_inteval = 105;//一圈500个脉冲，一个格子约105
 	
 		Load_motor_out(0);

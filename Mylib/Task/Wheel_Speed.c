@@ -132,7 +132,7 @@ void Wheel_Info_Update(){
 					{
 						if ( LaserAndPrep[TANK_SERIAL_NUMBER-1][11] == NEW)
 							{
-								Four_Wheel_Info.out_limit = 4400;
+								Four_Wheel_Info.out_limit = 4200;
 								Four_Wheel_Info.speed_limit = 1900;
 								Four_Wheel_Info.speed_K = 0.023f;   //0.023
 								
@@ -152,7 +152,7 @@ void Wheel_Info_Update(){
 			else{           
 				if ( LaserAndPrep[TANK_SERIAL_NUMBER-1][11] == NEW)
 				{
-					Four_Wheel_Info.out_limit = 5300;
+					Four_Wheel_Info.out_limit = 5200;
 					Four_Wheel_Info.speed_limit = 1900;
 					Four_Wheel_Info.speed_K = 0.023f;   //0.023
 				}
@@ -368,7 +368,7 @@ uint8_t Wheel_Speed_control(uint8_t flag)
 		}
 		else	
 		{
-			p_part = ( Wheel_para.shell_P ) * 0.1f * delta_b *0.75f;//P PART ËõÐ¡10±¶
+			p_part = ( Wheel_para.shell_P ) * 0.1f * delta_b *0.72f;//P PART ËõÐ¡10±¶
 		}
 	
 		
@@ -449,7 +449,7 @@ void Wheel_out_Proccess(float multiple){
 
 
 }
-float Power_P_Increase = 0.0085f,Power_P_Derease = 0.013f,Power_P = 1.05f,bas =8,divide =3,delta11111;
+float Power_P_Increase = 0.0085f,Power_P_Derease = 0.01f,Power_P = 1.05f,bas =8,divide =3,delta11111;
 void Power_Circle(uint8_t wheel_cnt ,uint8_t flag, float real_power, float reman_J ){
 
  
@@ -488,54 +488,56 @@ else{
 	Wheel_out_Proccess(delta_out);
 
 #endif
-#if 0
-if(delta >= 0){
+#if 1
+if((reman_J > 0)&&(reman_J < 60)){
 
 
- if(delta > 600){
-		Wheel_out_Proccess(1.5f);
+ if(reman_J < 10){
+		Wheel_out_Proccess(0.4f);
 }
-else if(delta > 500){
-		Wheel_out_Proccess(1.4f);
+
+
+else if(delta < 20){
+		Wheel_out_Proccess(0.5f);
 }
-else if(delta > 400){
-		Wheel_out_Proccess(1.3f);
+else if(delta < 30){
+		Wheel_out_Proccess(0.6f);
 }
-else if(delta > 300){
-		Wheel_out_Proccess(1.2f);
+else if(delta < 40){
+		Wheel_out_Proccess(0.7f);
 }
-else if(delta > 200){
-		Wheel_out_Proccess(1.1f);
+else if(delta < 50){
+		Wheel_out_Proccess(0.8f);
 }
-else if(delta > 100){
-		Wheel_out_Proccess(1.05f);
+else if(delta < 60){
+		Wheel_out_Proccess(0.9f);
 }
 
 }
-else if(delta < 0){
+//else if(delta < 0){
 
- if(delta < -600){
-		Wheel_out_Proccess(0);
-}
-else if(delta < -500){
-		Wheel_out_Proccess(0.05f);
-}
-else if(delta < -400){
-		Wheel_out_Proccess(0.15f);
-}
-else if(delta < -300){
-		Wheel_out_Proccess(0.25f);
-}
-else if(delta < -200){
-		Wheel_out_Proccess(0.35f);
-}
-else if(delta < -100){
-		Wheel_out_Proccess(0.45f);
-}
-else{
-		Wheel_out_Proccess(0.55f);
-}
-}
+// if(delta < -600){
+//		Wheel_out_Proccess(0);
+//}
+//else if(delta < -500){
+//		Wheel_out_Proccess(0.05f);
+//}
+//else if(delta < -400){
+//		Wheel_out_Proccess(0.15f);
+//}
+//else if(delta < -300){
+//		Wheel_out_Proccess(0.25f);
+//}
+//else if(delta < -200){
+//		Wheel_out_Proccess(0.35f);
+//}
+//else if(delta < -100){
+//		Wheel_out_Proccess(0.45f);
+//}
+//else{
+//		Wheel_out_Proccess(0.55f);
+//}
+//}
 
 #endif
 }

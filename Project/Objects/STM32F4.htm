@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\Objects\STM32F4.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\STM32F4.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Mon Jul 24 15:19:32 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Wed Jul 26 15:35:42 2017
 <BR><P>
-<H3>Maximum Stack Usage =        544 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        552 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 TIM8_BRK_TIM12_IRQHandler &rArr; ControlTask &rArr; Hit_Task &rArr; HitSDSU_Pro &rArr; SelectMode &rArr; TwoPointCal &rArr; __hardfp_cos &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 <P>
@@ -353,7 +353,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM8_BRK_TIM12_IRQHandler
 </UL>
 
-<P><STRONG><a name="[a3]"></a>Bullet_Cap_Close</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, load_motor.o(.text))
+<P><STRONG><a name="[a3]"></a>Bullet_Cap_Close</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, load_motor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Bullet_Cap_Close
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SetCompare3
@@ -361,7 +361,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Detect_Cap
 </UL>
 
-<P><STRONG><a name="[a4]"></a>Bullet_Cap_Open</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, load_motor.o(.text))
+<P><STRONG><a name="[a4]"></a>Bullet_Cap_Open</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, load_motor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Bullet_Cap_Open
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SetCompare3
@@ -379,7 +379,7 @@ Global Symbols
 
 <P><STRONG><a name="[16d]"></a>Load_Motor_Fault_detet</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, load_motor.o(.text), UNUSED)
 
-<P><STRONG><a name="[a6]"></a>Load_Motor_Error_Out</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, load_motor.o(.text), UNUSED)
+<P><STRONG><a name="[a6]"></a>Load_Motor_Error_Out</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, load_motor.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Load_motor_out
 </UL>
 
@@ -2068,7 +2068,7 @@ Global Symbols
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU6050_Read
 </UL>
 
-<P><STRONG><a name="[85]"></a>Attitude_update</STRONG> (Thumb, 220 bytes, Stack size 0 bytes, prepare_data.o(.text))
+<P><STRONG><a name="[85]"></a>Attitude_update</STRONG> (Thumb, 224 bytes, Stack size 0 bytes, prepare_data.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMU_update
 </UL>
 
@@ -2132,7 +2132,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM8_BRK_TIM12_IRQHandler
 </UL>
 
-<P><STRONG><a name="[129]"></a>Diy_Data_Proccess</STRONG> (Thumb, 222 bytes, Stack size 24 bytes, clock.o(.text))
+<P><STRONG><a name="[12a]"></a>Diy_Data_Proccess</STRONG> (Thumb, 222 bytes, Stack size 24 bytes, clock.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Diy_Data_Proccess
 </UL>
 <BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM8_BRK_TIM12_IRQHandler
@@ -2146,8 +2146,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM8_BRK_TIM12_IRQHandler
 </UL>
 
-<P><STRONG><a name="[36]"></a>TIM8_BRK_TIM12_IRQHandler</STRONG> (Thumb, 348 bytes, Stack size 24 bytes, clock.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 544<LI>Call Chain = TIM8_BRK_TIM12_IRQHandler &rArr; ControlTask &rArr; Hit_Task &rArr; HitSDSU_Pro &rArr; SelectMode &rArr; TwoPointCal &rArr; __hardfp_cos &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
+<P><STRONG><a name="[36]"></a>TIM8_BRK_TIM12_IRQHandler</STRONG> (Thumb, 358 bytes, Stack size 32 bytes, clock.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 552<LI>Call Chain = TIM8_BRK_TIM12_IRQHandler &rArr; ControlTask &rArr; Hit_Task &rArr; HitSDSU_Pro &rArr; SelectMode &rArr; TwoPointCal &rArr; __hardfp_cos &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Detect_Cap
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Shoot_Keep
@@ -2156,11 +2156,12 @@ Global Symbols
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wheel_Info_Update
 <LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mode_Change
 <LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerData_Detect
-<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Diy_Data_Proccess
+<LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Diy_Data_Proccess
 <LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ControlTask
 <LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ClearITPendingBit
 <LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_GetITStatus
 <LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ClearFlag
+<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40_41xxx.o(RESET)
 </UL>
@@ -2202,13 +2203,13 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Subsection_PID
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Amplitude_Limiting
-<LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ControlTask
 <LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HitSDSU_Pro
 </UL>
 
-<P><STRONG><a name="[122]"></a>Chassis_Remote_Dispack</STRONG> (Thumb, 406 bytes, Stack size 20 bytes, chassis_control.o(.text))
+<P><STRONG><a name="[122]"></a>Chassis_Remote_Dispack</STRONG> (Thumb, 422 bytes, Stack size 20 bytes, chassis_control.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = Chassis_Remote_Dispack
 </UL>
 <BR>[Calls]<UL><LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AmplitudeCheck
@@ -2266,7 +2267,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Power_Circle
 </UL>
 
-<P><STRONG><a name="[132]"></a>Power_Circle</STRONG> (Thumb, 92 bytes, Stack size 4 bytes, wheel_speed.o(.text))
+<P><STRONG><a name="[132]"></a>Power_Circle</STRONG> (Thumb, 260 bytes, Stack size 4 bytes, wheel_speed.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = Power_Circle
 </UL>
 <BR>[Calls]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wheel_out_Proccess
@@ -2274,7 +2275,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wheel_Speed_control
 </UL>
 
-<P><STRONG><a name="[79]"></a>Wheel_Speed_control</STRONG> (Thumb, 818 bytes, Stack size 40 bytes, wheel_speed.o(.text))
+<P><STRONG><a name="[79]"></a>Wheel_Speed_control</STRONG> (Thumb, 828 bytes, Stack size 40 bytes, wheel_speed.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = Wheel_Speed_control &rArr; Wheel_out &rArr; CAN_TransmitStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Power_Circle
@@ -2288,7 +2289,7 @@ Global Symbols
 <LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HitSDSU_Pro
 </UL>
 
-<P><STRONG><a name="[136]"></a>RampCal</STRONG> (Thumb, 104 bytes, Stack size 0 bytes, ramp.o(.text))
+<P><STRONG><a name="[136]"></a>RampCal</STRONG> (Thumb, 106 bytes, Stack size 0 bytes, ramp.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Remote_Imitate
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ComputerControl
 </UL>
@@ -2314,7 +2315,7 @@ Global Symbols
 <LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_Transmit
 </UL>
 
-<P><STRONG><a name="[78]"></a>Holder_Motor_output</STRONG> (Thumb, 218 bytes, Stack size 64 bytes, motor_out.o(.text))
+<P><STRONG><a name="[78]"></a>Holder_Motor_output</STRONG> (Thumb, 216 bytes, Stack size 64 bytes, motor_out.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = Holder_Motor_output &rArr; CAN_TransmitStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_TransmitStatus
@@ -2386,7 +2387,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[32]"></a>USART3_IRQHandler</STRONG> (Thumb, 254 bytes, Stack size 8 bytes, referee.o(.text))
+<P><STRONG><a name="[32]"></a>USART3_IRQHandler</STRONG> (Thumb, 266 bytes, Stack size 8 bytes, referee.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = USART3_IRQHandler &rArr; USART_GetITStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetITStatus
@@ -2396,7 +2397,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40_41xxx.o(RESET)
 </UL>
-<P><STRONG><a name="[31]"></a>USART2_IRQHandler</STRONG> (Thumb, 768 bytes, Stack size 8 bytes, referee.o(.text))
+<P><STRONG><a name="[31]"></a>USART2_IRQHandler</STRONG> (Thumb, 774 bytes, Stack size 8 bytes, referee.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = USART2_IRQHandler &rArr; USART_GetITStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetITStatus
@@ -2428,7 +2429,7 @@ Global Symbols
 <LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Append_CRC8_Check_Sum
 </UL>
 
-<P><STRONG><a name="[140]"></a>Append_CRC8_Check_Sum</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, referee.o(.text))
+<P><STRONG><a name="[140]"></a>Append_CRC8_Check_Sum</STRONG> (Thumb, 124 bytes, Stack size 16 bytes, referee.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = Append_CRC8_Check_Sum &rArr; Get_CRC8_Check_Sum
 </UL>
 <BR>[Calls]<UL><LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_CRC8_Check_Sum
@@ -2436,7 +2437,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendtoReferee
 </UL>
 
-<P><STRONG><a name="[64]"></a>SendtoReferee</STRONG> (Thumb, 208 bytes, Stack size 8 bytes, referee.o(.text))
+<P><STRONG><a name="[64]"></a>SendtoReferee</STRONG> (Thumb, 118 bytes, Stack size 8 bytes, referee.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = SendtoReferee &rArr; Append_CRC8_Check_Sum &rArr; Get_CRC8_Check_Sum
 </UL>
 <BR>[Calls]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Append_CRC8_Check_Sum
@@ -2489,8 +2490,9 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;New_Send_Data
 </UL>
 
-<P><STRONG><a name="[12a]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
+<P><STRONG><a name="[129]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Chassis_Control
+<LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM8_BRK_TIM12_IRQHandler
 </UL>
 
 <P><STRONG><a name="[23e]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
@@ -3025,8 +3027,8 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HitSDSU_Pro
 </UL>
 
-<P><STRONG><a name="[146]"></a>HitSDSU</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, hit.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = HitSDSU &rArr; Holder_Motor_output &rArr; CAN_TransmitStatus
+<P><STRONG><a name="[146]"></a>HitSDSU</STRONG> (Thumb, 152 bytes, Stack size 24 bytes, hit.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HitSDSU &rArr; Holder_Motor_output &rArr; CAN_TransmitStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Load_Motor_position_plus
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Holder_Motor_output
@@ -3035,11 +3037,11 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HitSDSU_Pro
 </UL>
 
-<P><STRONG><a name="[149]"></a>Manual_Hit</STRONG> (Thumb, 130 bytes, Stack size 0 bytes, hit.o(.text))
+<P><STRONG><a name="[149]"></a>Manual_Hit</STRONG> (Thumb, 216 bytes, Stack size 0 bytes, hit.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HitSDSU_Pro
 </UL>
 
-<P><STRONG><a name="[148]"></a>HitSDSU_Pro</STRONG> (Thumb, 270 bytes, Stack size 8 bytes, hit.o(.text))
+<P><STRONG><a name="[148]"></a>HitSDSU_Pro</STRONG> (Thumb, 186 bytes, Stack size 8 bytes, hit.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 504<LI>Call Chain = HitSDSU_Pro &rArr; SelectMode &rArr; TwoPointCal &rArr; __hardfp_cos &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wheel_Speed_control
@@ -3054,7 +3056,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Hit_Task
 </UL>
 
-<P><STRONG><a name="[14a]"></a>HitSDSU_Key_scan</STRONG> (Thumb, 242 bytes, Stack size 8 bytes, hit.o(.text))
+<P><STRONG><a name="[14a]"></a>HitSDSU_Key_scan</STRONG> (Thumb, 248 bytes, Stack size 8 bytes, hit.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = HitSDSU_Key_scan &rArr; Wheel_Speed_control &rArr; Wheel_out &rArr; CAN_TransmitStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wheel_Speed_control

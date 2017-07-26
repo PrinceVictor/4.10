@@ -83,6 +83,8 @@ int Last_PowerData;
 int PowerData;	
 uint8_t Hit_Flag;   //大幅信息检测
 uint8_t Hit_Identify_Flag;
+uint32_t Hit_Last_cnt;
+uint32_t Hit_cnt;
 uint8_t Hit_count;
 uint8_t Load_motor_Flag;    //拨弹电机信息检测
 uint8_t Load_motor_detect_Flag;

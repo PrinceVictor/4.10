@@ -19,7 +19,6 @@ void my_delay(int32_t num)
 }
 
 int main(void)
-
 {     
   int cnt =0;
 	float speed_main[4] = {1200,1200,1200,1200};

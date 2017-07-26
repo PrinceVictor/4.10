@@ -1,5 +1,5 @@
 Dependencies for Project 'STM32F4', Target 'STM32F4': (DO NOT MODIFY !)
-F (..\User\main.c)(0x5972E998)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (..\User\main.c)(0x59776237)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx.h)(0x56AA0074)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\core_cm4.h)(0x53C7D532)
 I (C:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x51C7B744)
@@ -44,7 +44,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\CAN2.h)(0x596EF929)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\I2C.h)(0x5779DDF4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\6050.h)(0x57A9D340)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\clock.h)(0x59742AD8)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x5974284C)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x597700BF)
 I (C:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x51C7B744)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\ramp.h)(0x594C5394)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\shoot.h)(0x5843C6D6)
@@ -53,7 +53,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\Remote.h)(0x59735A9D)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Chassis_Control.h)(0x59632130)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\Prepare_data.h)(0x592C4973)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Holder.h)(0x59638333)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\Imu.h)(0x592C4CEF)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Wheel_Speed.h)(0x5974432A)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\my_func.h)(0x596EFFBC)
@@ -64,8 +64,8 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Motor_out.h)(0x57AE93BD)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\Load_motor.h)(0x58EC6934)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\BKP_DATA.h)(0x58FB1FE4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\MyWDG.h)(0x58FB1FE4)
-F (..\User\OtherConfig.c)(0x5974C2EB)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\otherconfig.o --omf_browse .\objects\otherconfig.crf --depend .\objects\otherconfig.d)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+F (..\User\OtherConfig.c)(0x597762AE)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\otherconfig.o --omf_browse .\objects\otherconfig.crf --depend .\objects\otherconfig.d)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\sys.h)(0x56A9C79B)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx.h)(0x56AA0074)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\core_cm4.h)(0x53C7D532)
@@ -219,7 +219,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\CAN2.h)(0x596EF929)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\I2C.h)(0x5779DDF4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\6050.h)(0x57A9D340)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\clock.h)(0x59742AD8)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x5974284C)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x597700BF)
 I (C:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x51C7B744)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\ramp.h)(0x594C5394)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\shoot.h)(0x5843C6D6)
@@ -228,7 +228,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\Remote.h)(0x59735A9D)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Chassis_Control.h)(0x59632130)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\Prepare_data.h)(0x592C4973)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Holder.h)(0x59638333)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\main.h)(0x596F31F7)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\Imu.h)(0x592C4CEF)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Wheel_Speed.h)(0x5974432A)
@@ -319,7 +319,7 @@ I (C:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x51C7B744)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\Prepare_data.h)(0x592C4973)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\6050.h)(0x57A9D340)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\I2C.h)(0x5779DDF4)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\sys.h)(0x56A9C79B)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\main.h)(0x596F31F7)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\delay.h)(0x53B7797E)
@@ -327,7 +327,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\BootTask.h)(0x592C4056)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\sys.h)(0x56A9C79C)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\led.h)(0x58F9FB29)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\clock.h)(0x59742AD8)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x5974284C)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x597700BF)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\ramp.h)(0x594C5394)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\shoot.h)(0x5843C6D6)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Vision\Hit.h)(0x59703DB4)
@@ -381,10 +381,10 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_fsmc.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Holder.h)(0x59638333)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\Shoot.h)(0x5843C6D6)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\Remote.h)(0x59735A9D)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\sys.h)(0x56A9C79B)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\delay.h)(0x53B7797E)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x5974284C)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x597700BF)
 I (C:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x51C7B744)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\clock.h)(0x59742AD8)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\ramp.h)(0x594C5394)
@@ -407,7 +407,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\MyWDG.h)(0x58FB1FE4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\All_Config.h)(0x58FB07E1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\imu.h)(0x592C4CEF)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Vision\Hit_calculation.h)(0x57A9FACD)
-F (..\Mylib\BSP\Shoot.c)(0x5972E686)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\shoot.o --omf_browse .\objects\shoot.crf --depend .\objects\shoot.d)
+F (..\Mylib\BSP\Shoot.c)(0x5976D49A)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\shoot.o --omf_browse .\objects\shoot.crf --depend .\objects\shoot.d)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\Shoot.h)(0x5843C6D6)
 I (C:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x51C7B744)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx.h)(0x56AA0074)
@@ -445,10 +445,10 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_dcmi.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_fsmc.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\sys.h)(0x56A9C79C)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\Remote.h)(0x59735A9D)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\sys.h)(0x56A9C79B)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\Load_motor.h)(0x58EC6934)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x5974284C)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x597700BF)
 I (C:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x51C7B744)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\clock.h)(0x59742AD8)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\ramp.h)(0x594C5394)
@@ -516,7 +516,7 @@ I (C:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x51C7B744)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\Prepare_data.h)(0x592C4973)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\6050.h)(0x57A9D340)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\I2C.h)(0x5779DDF4)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\sys.h)(0x56A9C79B)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\main.h)(0x596F31F7)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\delay.h)(0x53B7797E)
@@ -525,7 +525,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\sys.h)(0x56A9C79C)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\led.h)(0x58F9FB29)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\CAN2.h)(0x596EF929)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\clock.h)(0x59742AD8)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x5974284C)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x597700BF)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\shoot.h)(0x5843C6D6)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Vision\Hit.h)(0x59703DB4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Vision\Hit_calculation.h)(0x57A9FACD)
@@ -1144,7 +1144,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_can.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_dac.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_dcmi.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_fsmc.h)(0x53DBAFAE)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x5974284C)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x597700BF)
 I (C:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x51C7B744)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\ramp.h)(0x594C5394)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\shoot.h)(0x5843C6D6)
@@ -1155,7 +1155,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\Prepare_data.h)(0x592C4973)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\6050.h)(0x57A9D340)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\I2C.h)(0x5779DDF4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Holder.h)(0x59638333)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\main.h)(0x596F31F7)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\delay.h)(0x53B7797E)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\BootTask.h)(0x592C4056)
@@ -1215,14 +1215,14 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Wheel_Speed.h)(0x5974432A)
 I (C:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x51C7B744)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\Prepare_data.h)(0x592C4973)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Holder.h)(0x59638333)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\main.h)(0x596F31F7)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\BootTask.h)(0x592C4056)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\sys.h)(0x56A9C79C)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\led.h)(0x58F9FB29)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\CAN2.h)(0x596EF929)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\clock.h)(0x59742AD8)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x5974284C)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x597700BF)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\ramp.h)(0x594C5394)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\shoot.h)(0x5843C6D6)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Vision\Hit.h)(0x59703DB4)
@@ -1236,7 +1236,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\BKP_DATA.h)(0x58FB1FE4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\MyWDG.h)(0x58FB1FE4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\imu.h)(0x592C4CEF)
 I (C:\Program Files (x86)\MDK\ARM\ARMCC\include\math.h)(0x51C7B744)
-F (..\Mylib\IMU\I2C.c)(0x5779DD6C)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\i2c.o --omf_browse .\objects\i2c.crf --depend .\objects\i2c.d)
+F (..\Mylib\IMU\I2C.c)(0x59776226)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\i2c.o --omf_browse .\objects\i2c.crf --depend .\objects\i2c.d)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx.h)(0x56AA0074)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\core_cm4.h)(0x53C7D532)
 I (C:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x51C7B744)
@@ -1272,7 +1272,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_dac.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_dcmi.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_fsmc.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\I2C.h)(0x5779DDF4)
-F (..\Mylib\IMU\Prepare_data.c)(0x5970DC64)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\prepare_data.o --omf_browse .\objects\prepare_data.crf --depend .\objects\prepare_data.d)
+F (..\Mylib\IMU\Prepare_data.c)(0x597762B0)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\prepare_data.o --omf_browse .\objects\prepare_data.crf --depend .\objects\prepare_data.d)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\Prepare_data.h)(0x592C4973)
 I (C:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x51C7B744)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx.h)(0x56AA0074)
@@ -1311,7 +1311,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_fsmc.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\6050.h)(0x57A9D340)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\I2C.h)(0x5779DDF4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Holder.h)(0x59638333)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\sys.h)(0x56A9C79B)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\main.h)(0x596F31F7)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\delay.h)(0x53B7797E)
@@ -1320,7 +1320,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\sys.h)(0x56A9C79C)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\led.h)(0x58F9FB29)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\CAN2.h)(0x596EF929)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\clock.h)(0x59742AD8)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x5974284C)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x597700BF)
 I (C:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x51C7B744)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\ramp.h)(0x594C5394)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\shoot.h)(0x5843C6D6)
@@ -1337,7 +1337,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\Load_motor.h)(0x58EC6934)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\BKP_DATA.h)(0x58FB1FE4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\MyWDG.h)(0x58FB1FE4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\imu.h)(0x592C4CEF)
-F (..\Mylib\Task\clock.c)(0x597591C6)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\clock.o --omf_browse .\objects\clock.crf --depend .\objects\clock.d)
+F (..\Mylib\Task\clock.c)(0x597762C2)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\clock.o --omf_browse .\objects\clock.crf --depend .\objects\clock.d)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\clock.h)(0x59742AD8)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\sys.h)(0x56A9C79B)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx.h)(0x56AA0074)
@@ -1374,7 +1374,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_can.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_dac.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_dcmi.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_fsmc.h)(0x53DBAFAE)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x5974284C)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x597700BF)
 I (C:\Program Files (x86)\MDK\ARM\ARMCC\include\stdio.h)(0x51C7B744)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\ramp.h)(0x594C5394)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\shoot.h)(0x5843C6D6)
@@ -1385,7 +1385,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\Prepare_data.h)(0x592C4973)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\6050.h)(0x57A9D340)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\I2C.h)(0x5779DDF4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Holder.h)(0x59638333)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\main.h)(0x596F31F7)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\delay.h)(0x53B7797E)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\BootTask.h)(0x592C4056)
@@ -1438,10 +1438,10 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_can.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_dac.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_dcmi.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_fsmc.h)(0x53DBAFAE)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\sys.h)(0x56A9C79B)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Motor_out.h)(0x57AE93BD)
-F (..\Mylib\Task\Chassis_Control.c)(0x597423AD)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\chassis_control.o --omf_browse .\objects\chassis_control.crf --depend .\objects\chassis_control.d)
+F (..\Mylib\Task\Chassis_Control.c)(0x597704E4)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\chassis_control.o --omf_browse .\objects\chassis_control.crf --depend .\objects\chassis_control.d)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Chassis_Control.h)(0x59632130)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx.h)(0x56AA0074)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\core_cm4.h)(0x53C7D532)
@@ -1482,7 +1482,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\Prepare_data.h)(0x592C4973)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\6050.h)(0x57A9D340)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\I2C.h)(0x5779DDF4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Holder.h)(0x59638333)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\sys.h)(0x56A9C79B)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\main.h)(0x596F31F7)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\delay.h)(0x53B7797E)
@@ -1491,7 +1491,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\sys.h)(0x56A9C79C)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\led.h)(0x58F9FB29)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\CAN2.h)(0x596EF929)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\clock.h)(0x59742AD8)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x5974284C)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x597700BF)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\ramp.h)(0x594C5394)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\shoot.h)(0x5843C6D6)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Vision\Hit.h)(0x59703DB4)
@@ -1506,7 +1506,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\BKP_DATA.h)(0x58FB1FE4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\MyWDG.h)(0x58FB1FE4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\All_Config.h)(0x58FB07E1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\imu.h)(0x592C4CEF)
-F (..\Mylib\Task\Wheel_Speed.c)(0x59759098)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\wheel_speed.o --omf_browse .\objects\wheel_speed.crf --depend .\objects\wheel_speed.d)
+F (..\Mylib\Task\Wheel_Speed.c)(0x5977040A)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\wheel_speed.o --omf_browse .\objects\wheel_speed.crf --depend .\objects\wheel_speed.d)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Wheel_Speed.h)(0x5974432A)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx.h)(0x56AA0074)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\core_cm4.h)(0x53C7D532)
@@ -1547,7 +1547,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\Prepare_data.h)(0x592C4973)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\6050.h)(0x57A9D340)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\I2C.h)(0x5779DDF4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Holder.h)(0x59638333)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\sys.h)(0x56A9C79B)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\main.h)(0x596F31F7)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\delay.h)(0x53B7797E)
@@ -1556,7 +1556,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\sys.h)(0x56A9C79C)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\led.h)(0x58F9FB29)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\CAN2.h)(0x596EF929)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\clock.h)(0x59742AD8)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x5974284C)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x597700BF)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\ramp.h)(0x594C5394)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\shoot.h)(0x5843C6D6)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Vision\Hit.h)(0x59703DB4)
@@ -1614,7 +1614,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\Prepare_data.h)(0x592C4973)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\6050.h)(0x57A9D340)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\I2C.h)(0x5779DDF4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Holder.h)(0x59638333)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\sys.h)(0x56A9C79B)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\main.h)(0x596F31F7)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\delay.h)(0x53B7797E)
@@ -1623,7 +1623,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\sys.h)(0x56A9C79C)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\led.h)(0x58F9FB29)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\CAN2.h)(0x596EF929)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\clock.h)(0x59742AD8)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x5974284C)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x597700BF)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\shoot.h)(0x5843C6D6)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Vision\Hit.h)(0x59703DB4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Vision\Hit_calculation.h)(0x57A9FACD)
@@ -1673,10 +1673,10 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_dac.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_dcmi.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx_fsmc.h)(0x53DBAFAE)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Holder.h)(0x59638333)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\sys.h)(0x56A9C79B)
-F (..\Mylib\Referee\referee.c)(0x59742AD8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\referee.o --omf_browse .\objects\referee.crf --depend .\objects\referee.d)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x5974284C)
+F (..\Mylib\Referee\referee.c)(0x59771063)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\referee.o --omf_browse .\objects\referee.crf --depend .\objects\referee.d)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x597700BF)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx.h)(0x56AA0074)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\core_cm4.h)(0x53C7D532)
 I (C:\Program Files (x86)\MDK\ARM\ARMCC\include\stdint.h)(0x51C7B744)
@@ -1723,7 +1723,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\Prepare_data.h)(0x592C4973)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\6050.h)(0x57A9D340)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\I2C.h)(0x5779DDF4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Holder.h)(0x59638333)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\main.h)(0x596F31F7)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\delay.h)(0x53B7797E)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\BootTask.h)(0x592C4056)
@@ -1741,7 +1741,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\All_Config.h)(0x58FB07E1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\imu.h)(0x592C4CEF)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Vision\Hit_calculation.h)(0x57A9FACD)
 I (C:\Program Files (x86)\MDK\ARM\ARMCC\include\string.h)(0x51C7B744)
-F (..\Vision\Hit.c)(0x597591C6)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\hit.o --omf_browse .\objects\hit.crf --depend .\objects\hit.d)
+F (..\Vision\Hit.c)(0x597762C2)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I..\Libraries -I..\Mylib -I..\User -I..\IMU -I..\Vision -I..\Mylib\BSP -I..\Mylib\IMU -I..\Mylib\Referee -I..\Mylib\Task-I "C:\Program Files (x86)\MDK\ARM\RV31\INC"-I "C:\Program Files (x86)\MDK\ARM\CMSIS\Include"-I "C:\Program Files (x86)\MDK\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -D__FPU_PRESENT="1" -D__FPU_USED="1" -DSTM32F40_41xxx-o .\objects\hit.o --omf_browse .\objects\hit.crf --depend .\objects\hit.d)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Vision\Hit.h)(0x59703DB4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\stm32f4xx.h)(0x56AA0074)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Libraries\core_cm4.h)(0x53C7D532)
@@ -1785,7 +1785,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\Prepare_data.h)(0x592C4973)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\6050.h)(0x57A9D340)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\IMU\I2C.h)(0x5779DDF4)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\Holder.h)(0x59638333)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x59759207)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\OtherConfig.h)(0x597760F1)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\User\main.h)(0x596F31F7)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\delay.h)(0x53B7797E)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\BootTask.h)(0x592C4056)
@@ -1793,7 +1793,7 @@ I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\sys.h)(0x56A9C79C)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\led.h)(0x58F9FB29)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\CAN2.h)(0x596EF929)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\clock.h)(0x59742AD8)
-I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x5974284C)
+I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Referee\referee.h)(0x597700BF)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\Task\ramp.h)(0x594C5394)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\shoot.h)(0x5843C6D6)
 I (E:\ROBOMASTERS\自制板\新步兵车4.10\Mylib\BSP\Load_motor.h)(0x58EC6934)

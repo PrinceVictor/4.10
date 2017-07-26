@@ -27,7 +27,6 @@ void Sys_Configuration(void)
     tim.TIM_CounterMode = TIM_CounterMode_Up;  
     TIM_ARRPreloadConfig(TIM4, ENABLE);	
     TIM_TimeBaseInit(TIM4, &tim);
-
     TIM_Cmd(TIM4,ENABLE);	
 }
 

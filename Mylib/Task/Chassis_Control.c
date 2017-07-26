@@ -93,8 +93,8 @@ int8_t Chassis_Remote_Dispack(uint8_t flag)
 
 //	remote_data_deal(1 , 20);//防止速度变化过大导致的超功率
 
-	direction[0]=x*(-f0+r0)+y*y0;
-	direction[1]=x*(f0+r0)+y*y0;
+	direction[0]=x*(-f0+r0)+y*y0*1.2f;
+	direction[1]=x*(f0+r0)+y*y0*1.2f;
 	direction[2]=x*(f0-r0)+y*y0;
 	direction[3]=x*(-f0-r0)+y*y0;
 	
@@ -142,9 +142,9 @@ void Anaconda(uint8_t flag)
 void Lets_Rock(uint8_t flag)
 {
 	static uint32_t cnt = 0;
-	int16_t time_ms = 300;
+	int16_t time_ms = 320;
 	
-	float angle = 38.0f;
+	float angle = 40.0f;
 	
 	float k ;
 		
@@ -189,7 +189,7 @@ void Lets_Rock(uint8_t flag)
 
 void Angle_Attack(){
 	float k = 0;
-	float angle = 35;
+	float angle = 40;
 	
 	
 	k = angle / 50;

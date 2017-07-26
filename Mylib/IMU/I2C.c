@@ -44,7 +44,7 @@ void I2C_delay(void)
 {
 //	__NOP();
 	int a = 6;//6
-		while(a--);
+	while(a--);
 }
 
 void delay5ms(void)

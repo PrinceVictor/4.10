@@ -1,4 +1,4 @@
-#include "Hit.h"
+ #include "Hit.h"
 
 #define ENABLE 1
 #define DISABLE 0
@@ -76,6 +76,7 @@ void Hit_Task(uint8_t flag)
 
 static void HitSDSU_Key_scan(uint8_t flag)
 {
+
 	if( flag == 0 )
 	{
 		return;
@@ -111,12 +112,14 @@ static void HitSDSU_Key_scan(uint8_t flag)
 		TestSDSU = 0;
 		Fetch_cnt =0;
 /********************************************/		
+
 		yaw_Hold_Info.angle_target = 0;
 		Pitch_Hold_Info.angle_target = 0;
 		ComeToZero(1);
 		Wheel_Speed_control(0);
 		yaw_Hold_Info.angle = 0;
-		
+		ManualMode = 0;
+
 /********************************************/
 	}
 	if((RC_Ctl.key.v & RC_Key.key_B)){
@@ -196,9 +199,16 @@ int jjjjwww = 0;
 
 static void HitSDSU(uint8_t mode,uint8_t point)
 {
-	float pitch_temp;
-	
+	uint8_t Mode1 ;
 	uint32_t Target = mode;
+	
+	if(Hit_rev[3]==0x0A){
+		if((Detect_Data.Hit_cnt - Detect_Data.Hit_Last_cnt)>15){
+			Mode1 = 1;
+}
+		else Mode1 = 0;
+}
+		else Mode1 = 1;
 	
 	yaw_Hold_Info.HitOrNot = 1;
 	Pitch_Hold_Info.angle_target = TargetTable[point-1][1];
@@ -212,14 +222,16 @@ static void HitSDSU(uint8_t mode,uint8_t point)
   {
 		
 
-  }else if(Shoot_Info.load_command  == 1)
+  }else if((Shoot_Info.load_command  == 1)&&Mode1)
   {
 
     Load_Motor_position_plus(LaserAndPrep[TANK_SERIAL_NUMBER-1][4]);
-		
+		Detect_Data.Hit_Last_cnt = Detect_Data.Hit_cnt;
   }
   
+	
   LastTarget = Target;
+
 }
 
 
