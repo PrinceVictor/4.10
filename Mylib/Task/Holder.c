@@ -14,7 +14,7 @@ struct PID_PARA Yaw_para;
 struct PID_PARA Pitch_para_6623 = 
 {
 	350, 0 , 25,  //250  //400
-	150 , 0 , 0  //120   //150
+	120 , 0 , 0  //120   //150
 }	;
 
 struct PID_PARA Yaw_para_6623 = 

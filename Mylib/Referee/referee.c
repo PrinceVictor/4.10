@@ -1,4 +1,4 @@
- #include "referee.h"
+#include "referee.h"
 #include "math.h"
 #include "Hit.h"
 //#include "Define.h"
@@ -241,9 +241,10 @@ void New_Send_Data(uint8_t *data,uint16_t size)
   DMA_Cmd(DMA1_Stream6,ENABLE); 
 }
 
+int dara = 0,time_count = 0;
 void USART3_IRQHandler(void)
 {
-  static uint32_t this_time_rx_len = 0;
+ static uint32_t this_time_rx_len = 0;
   uint8_t i=0;
 	if(USART_GetITStatus(USART3, USART_IT_IDLE) != RESET)
 	{
@@ -256,23 +257,38 @@ void USART3_IRQHandler(void)
 			DMA_Cmd(DMA1_Stream1, DISABLE);
     
 			this_time_rx_len = 5 - DMA_GetCurrDataCounter(DMA1_Stream1);
+		
 			DMA1_Stream1->NDTR = (uint16_t)5;     //relocate the dma memory pointer to the beginning position
 			//DMA1_Stream1->CR |= (uint32_t)(DMA_SxCR_CT);                  //enable the current selected memory is Memory 1
 			DMA_Cmd(DMA1_Stream1, ENABLE);
 		
       //ÊÓ¾ßÌåĞ­Òé¶ø¶
 			if((Hit_rev[0]  ==  0xAA )&&(Hit_rev[2]  ==  0xAB )){
-				Hit[1] = Hit_rev[1];
+
+//				time_count = clock_cnt - dara;
 				Detect_Data.Hit_Identify_Flag = 1;
+				
 				if(Hit_rev[3] == 0x0A){
+					
+	//					if(Detect_Data.Hit_cnt > 2){
+	//				if((Detect_Data.Hit_cnt - Detect_Data.Hit_Last_cnt)>9){
+				Hit[1] = Hit_rev[1];
 				Hit[3] = Hit_rev[1];
-				Detect_Data.Hit_cnt++;	
+							
+	//					}
+	//				}
+					
+
 }
 				else if(Hit_rev[3] == 0x14){
+				
+				Hit[1] = Hit_rev[1];
 				Detect_Data.Hit_count++;
 				Hit[3] = Detect_Data.Hit_count;
 				if(Detect_Data.Hit_count > 200){
 				Detect_Data.Hit_count = 0;
+				
+			//	Detect_Data.Hit_cnt = 0;
 }
 				}
 				

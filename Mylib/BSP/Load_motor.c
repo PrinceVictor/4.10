@@ -12,7 +12,7 @@ void Load_Motor_Error_Out(void);
 
 struct PID_PARA Load_motor = 
 {
-	230,0,0,35,0,0
+	180,0,0,35,0,0   //230
 };
 
 

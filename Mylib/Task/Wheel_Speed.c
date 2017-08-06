@@ -120,7 +120,7 @@ void Wheel_Info_Update(){
 					Four_Wheel_Info.speed_limit = 1900;
 					Four_Wheel_Info.speed_K = 0.024f;
 				}
-				NORMAL_FORWARD_BACK_SPEED 	= 700;   //640
+				NORMAL_FORWARD_BACK_SPEED 	= 690;   //640
 				NORMAL_LEFT_RIGHT_SPEED   	=	620; 
 			}
 }
@@ -368,7 +368,7 @@ uint8_t Wheel_Speed_control(uint8_t flag)
 		}
 		else	
 		{
-			p_part = ( Wheel_para.shell_P ) * 0.1f * delta_b *0.72f;//P PART ËõÐ¡10±¶
+			p_part = ( Wheel_para.shell_P ) * 0.1f * delta_b *0.75f;//P PART ËõÐ¡10±¶
 		}
 	
 		
@@ -449,7 +449,7 @@ void Wheel_out_Proccess(float multiple){
 
 
 }
-float Power_P_Increase = 0.0085f,Power_P_Derease = 0.01f,Power_P = 1.05f,bas =8,divide =3,delta11111;
+float Power_P_Increase = 0.0055f,Power_P_Derease = 0.01f,Power_P = 1.05f,bas =8,divide =3,delta11111;
 void Power_Circle(uint8_t wheel_cnt ,uint8_t flag, float real_power, float reman_J ){
 
  
@@ -461,6 +461,57 @@ void Power_Circle(uint8_t wheel_cnt ,uint8_t flag, float real_power, float reman
 
 else{
 	delta = (75 - real_power);
+#if 0	
+	if(delta >= 0){
+		
+		
+		Wheel_out_Proccess(1.0f);
+
+// if(delta > 60){
+//		Wheel_out_Proccess(1.45f);
+//}
+//else if(delta > 50){
+//		Wheel_out_Proccess(1.35f);
+//}
+//else if(delta > 40){
+//		Wheel_out_Proccess(1.25f);
+//}
+//else if(delta > 30){
+//		Wheel_out_Proccess(1.15f);
+//}
+//else if(delta > 20){
+//		Wheel_out_Proccess(1.1f);
+//}
+//else if(delta > 10){
+//		Wheel_out_Proccess(1.05f);
+//}
+
+}
+else if(delta < 0){
+
+ if(delta < -60){
+		Wheel_out_Proccess(0);
+}
+else if(delta < -50){
+		Wheel_out_Proccess(0.45f);
+}
+else if(delta < -40){
+		Wheel_out_Proccess(0.55f);
+}
+else if(delta < -30){
+		Wheel_out_Proccess(0.65f);
+}
+else if(delta < -20){
+		Wheel_out_Proccess(0.75f);
+}
+else if(delta < -10){
+		Wheel_out_Proccess(0.85f);
+}
+else{
+		Wheel_out_Proccess(0.95f);
+}
+}
+#endif
 #if 0
 	if(Four_Wheel_Info.out[wheel_cnt] > 0 ){
 	delta = Four_Wheel_Info.out[wheel_cnt] / divide- real_power * bas;
@@ -480,7 +531,9 @@ else{
 #if 1
 	 
 	if(delta >= 0)  {
-		delta_out = Power_P_Increase * delta + 1.0f ;
+	delta_out = Power_P_Increase * delta + 1.0f ;
+		
+//		delta_out = 1.0f ;
 	}
 	else if(delta < 0){
 		delta_out = 0.95f + Power_P_Derease * delta ;
@@ -493,24 +546,22 @@ if((reman_J > 0)&&(reman_J < 60)){
 
 
  if(reman_J < 10){
-		Wheel_out_Proccess(0.4f);
+		Wheel_out_Proccess(0.3f);
 }
-
-
-else if(delta < 20){
+else if(reman_J < 20){
 		Wheel_out_Proccess(0.5f);
 }
-else if(delta < 30){
+else if(reman_J < 30){
 		Wheel_out_Proccess(0.6f);
 }
-else if(delta < 40){
+else if(reman_J < 40){
 		Wheel_out_Proccess(0.7f);
 }
-else if(delta < 50){
+else if(reman_J < 50){
 		Wheel_out_Proccess(0.8f);
 }
-else if(delta < 60){
-		Wheel_out_Proccess(0.9f);
+else if(reman_J < 60){
+		Wheel_out_Proccess(0.925f);
 }
 
 }

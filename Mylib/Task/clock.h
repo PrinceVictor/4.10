@@ -36,7 +36,7 @@ uint32_t Get_Time_Micros(void);
 
 void ControlTask(uint8_t flag);
 
-extern int32_t clock_cnt;
+extern int clock_cnt;
 extern uint8_t Run_state ;
 void PowerData_Detect(void);
 

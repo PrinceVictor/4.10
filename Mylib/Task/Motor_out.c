@@ -62,7 +62,7 @@ int8_t Holder_Motor_output(int8_t flag )
 	
 	if(  TANK_SERIAL_NUMBER == 2){
 	pitch_out_s16 = -(int16_t)Pitch_Hold_Info.out;
-	yaw_out_s16 = (int16_t)yaw_Hold_Info.out;
+	yaw_out_s16 = -(int16_t)yaw_Hold_Info.out;
 
 }
 	else if(  TANK_SERIAL_NUMBER == 3){

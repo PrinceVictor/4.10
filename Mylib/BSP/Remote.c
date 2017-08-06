@@ -137,6 +137,7 @@ void USART1_IRQHandler(void)
 void Computer_Control(void){
 		float angle_plus;
 		float pitch_plus;
+
 	
 		ComputerControl();
 	
@@ -225,7 +226,7 @@ void Remote_Control(void){
 	
 					Pitch_Hold_Info.angle_target = Pitch_Hold_Info.angle_temp ;	
 					
-					yaw_Hold_Info.angle_temp = yaw_Hold_Info.angle_target + ( 1024 - RC_Ctl.rc.ch2 ) * 0.0039f;//测试视觉时，注释此举
+					yaw_Hold_Info.angle_temp = yaw_Hold_Info.angle_target + ( 1024 - RC_Ctl.rc.ch2 ) * 0.006f;//测试视觉时，注释此举
 					
 					//Amplitude_Limiting(ENABLE , yaw_Hold_Info.angle_temp , 60 , -60);
 					

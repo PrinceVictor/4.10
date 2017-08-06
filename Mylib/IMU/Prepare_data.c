@@ -35,11 +35,23 @@ void Attitude_update(void)
 	yaw_Hold_Info.angle += ( yaw_Hold_Info.angle_speed * K_ANGLESPEED_2_ANGLE  );
 	
 //	
-	if(  TANK_SERIAL_NUMBER == 3)
+	if(  TANK_SERIAL_NUMBER == 2)
 	{
-		if(  yaw_Hold_Info.can_angle_raw > 5000)
+		if(  yaw_Hold_Info.can_angle_raw < 4000)
 		{
-			yaw_Hold_Info.can_angle_raw_new = yaw_Hold_Info.can_angle_raw  - 8191;
+			yaw_Hold_Info.can_angle_raw_new = yaw_Hold_Info.can_angle_raw  + 8191;
+		}
+		else 
+			{
+			yaw_Hold_Info.can_angle_raw_new = yaw_Hold_Info.can_angle_raw;
+		}
+		
+	}
+	else if(  TANK_SERIAL_NUMBER == 3)
+	{
+		if(  yaw_Hold_Info.can_angle_raw < 3000)
+		{
+			yaw_Hold_Info.can_angle_raw_new = yaw_Hold_Info.can_angle_raw  + 8191;
 		}
 		else 
 			{

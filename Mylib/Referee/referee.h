@@ -96,6 +96,12 @@ uint8_t RedAirPortSta;
 uint8_t BlueAirPortSta;
 uint8_t BigRune0status;
 uint8_t BigRune1status;	
+uint8_t Attack_HitFlag;
+uint8_t Ctrl_Quit_Flag;
+uint16_t Ctrl_Quit_count;
+uint8_t Triple_Shoot_Flag;
+uint16_t Triple_Shoot_count;
+uint8_t Triple_Shoot_Invel;
   
 };
 

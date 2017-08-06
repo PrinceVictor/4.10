@@ -16,7 +16,7 @@ struct Chassis_Info Chassis_Control_Info;
 //2600
 struct PID_PARA Chassis_para = 
 {
-	2200,0,0,
+	1500,0,0,
 	0,0,0
 };
 
@@ -93,11 +93,24 @@ int8_t Chassis_Remote_Dispack(uint8_t flag)
 
 //	remote_data_deal(1 , 20);//防止速度变化过大导致的超功率
 
-	direction[0]=x*(-f0+r0)+y*y0*1.2f;
-	direction[1]=x*(f0+r0)+y*y0*1.2f;
+
+	
+
+if(Detect_Data.Attack_HitFlag == 1){
+		
+	direction[0]=150*r0+y*y0;
+	direction[1]=150*f0+y*y0;
+	direction[2]=-150*r0+y*y0;
+	direction[3]=-150*f0+y*y0;
+
+}
+else{
+	direction[0]=x*(-f0+r0)+y*y0;
+	direction[1]=x*(f0+r0)+y*y0;
 	direction[2]=x*(f0-r0)+y*y0;
 	direction[3]=x*(-f0-r0)+y*y0;
-	
+
+}
 //	Observe_data[0] = direction[0];
 //	Observe_data[1] = direction[1];
 //	Observe_data[2] = direction[2];
@@ -189,7 +202,7 @@ void Lets_Rock(uint8_t flag)
 
 void Angle_Attack(){
 	float k = 0;
-	float angle = 40;
+	float angle = 43;
 	
 	
 	k = angle / 50;

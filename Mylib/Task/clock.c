@@ -6,11 +6,12 @@ void Body_Protect(uint8_t flag);
 void Mode_Change(void);
 
 
-int32_t clock_cnt = 0;
+int clock_cnt = 0;
 int32_t Reset_cnt = 0;
 uint8_t Diy_cnt = 0,Reset_can =1;
 uint8_t Run_state = STATE_INIT;
 
+int Load_Dis = 170;
 //uint8_t Run_state = STATE_RUN;
 
 int32_t mpu_cnt = 0;
@@ -100,13 +101,35 @@ void TIM8_BRK_TIM12_IRQHandler(void)
 		PowerData_Detect();
 		
 		Diy_Data_Proccess( Detect_Data ,&UserDefineData);
-		
-		if( Shoot_Info.Call_cnt >= 10 )//10ms调用一次送弹电机控制
+	if(Detect_Data.Triple_Shoot_Flag == 1){
+			
+			if(Detect_Data.Triple_Shoot_count < 400){
+				
+				Detect_Data.Triple_Shoot_Invel ++ ;
+				
+				if(Detect_Data.Triple_Shoot_Invel > 132)
+				
+		{		
+			Load_Motor_position_plus(Load_Dis);
+			Detect_Data.Triple_Shoot_Invel = 0;
+		}	
+				
+				
+
+}
+		if(Shoot_Info.load_command == 1){
+			RC_Ctl.mouse.press_l = 1;
+			Load_motor_control(1,1);
+		}
+}
+		else if( Shoot_Info.Call_cnt >= 10 )//10ms调用一次送弹电机控制
 		{	
 			Shoot_Info.Call_cnt = 0;
-			
-			Load_motor_control(1,HitMode);
-		}
+
+		
+				Load_motor_control(1,HitMode);
+		
+}
 
 	
 		ControlTask(Run_state);
@@ -141,6 +164,22 @@ void ControlTask(uint8_t flag)
 	{
 		mpu_cnt ++;
 	}
+	else if(Detect_Data.Ctrl_Quit_Flag == 1){
+		
+		Run_state = STATE_INIT;
+		
+		Detect_Data.Ctrl_Quit_count++;
+		
+		if(Detect_Data.Ctrl_Quit_count > 10){
+				
+			Detect_Data.Ctrl_Quit_Flag = 0;
+			
+			Detect_Data.Ctrl_Quit_count = 0;
+
+}
+
+
+}
 	else
 	{
 		Run_state = STATE_RUN;
@@ -153,12 +192,15 @@ void ControlTask(uint8_t flag)
       
 			yaw_Hold_Info.angle_target = 0;
 			Pitch_Hold_Info.angle_target = 0;
-		
+			yaw_Hold_Info.angle_temp = 0;
+			Pitch_Hold_Info.angle_temp = 0;
+			
 			ComeToZero(COME_TO_ZERO);
 		
 			Wheel_Speed_control(0);
 		
 			yaw_Hold_Info.angle = 0;
+
 		
 			break;}
 		
@@ -183,6 +225,8 @@ void ControlTask(uint8_t flag)
 			if(RC_Ctl.key.v & 0x0010)
 			{
 				Anaconda(1);
+				
+				Detect_Data.Attack_HitFlag  = 0;
 	
 			}
 			else if((RC_Ctl.key.v & 0x4000)&&(RC_Ctl.key.v & 0x0020))
@@ -192,12 +236,16 @@ void ControlTask(uint8_t flag)
 					if( Reset_can &&( Reset_cnt > 1000)) {
 					SoftReset();
 					Reset_can = 0;
+						
+					Detect_Data.Attack_HitFlag  = 0;
 					}
 					
 			}
 			else if(RC_Ctl.key.v & 0x2000){
 				
 				Angle_Attack();
+				
+				Detect_Data.Attack_HitFlag  = 1;
 			
 			}
 			else
@@ -205,9 +253,10 @@ void ControlTask(uint8_t flag)
 				Reset_can = 1;
 				Reset_cnt = 0;
 				Chassis_Control_Info.Chassis_angle_Target = 0;
+				Detect_Data.Attack_HitFlag  = 0;
 				time_ms_angle = 50;
 				Anaconda(0);
-				Lets_Revolve(0);
+//				Lets_Revolve(0);
 			}
 		}
 			
@@ -215,7 +264,8 @@ void ControlTask(uint8_t flag)
 			{
 				Chassis_Control_Info.Chassis_angle_Target = 0;
 				Anaconda(0);
-				Lets_Revolve(0);
+//				Lets_Revolve(0);
+				Detect_Data.Attack_HitFlag  = 0;
 			}
 		#endif
 			
@@ -333,11 +383,27 @@ void Diy_Data_Proccess(struct _FunctionDetect_DATA  Diy_data , struct _SEND_DIY_
 
 
 }	
-	
-	
-	
 
+	if(RC_Ctl.key.v &0x0100){
 
+		Detect_Data.Triple_Shoot_count ++;
+		
+		Detect_Data.Triple_Shoot_Flag = 1;
+		
+		if(Detect_Data.Triple_Shoot_count > 1000){
+			
+			Detect_Data.Triple_Shoot_count = 0;
+			Detect_Data.Triple_Shoot_Invel = 0;
+}
+
+}
+else{
+		
+		Detect_Data.Triple_Shoot_Flag = 0;
+		Detect_Data.Triple_Shoot_count = 0;
+		Detect_Data.Triple_Shoot_Invel = 0;
+
+}
 }
 
 

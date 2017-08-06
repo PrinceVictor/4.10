@@ -9,7 +9,7 @@
 #define LEFT_LIMINT_ANGLE 40.0f //云台左侧角度限制
 #define RIGHT_LIMINT_ANGLE -40.0f//云台右侧角度限制
 
-#define PITCH_NEGTIVE_LIMIT_ANGLE -8.0f		//云台上方角度限制
+#define PITCH_NEGTIVE_LIMIT_ANGLE -9.0f		//云台上方角度限制
 #define PITCH_POSITIVE_LIMIT_ANGLE 23.0f		//云台下方角度限制
 
 
