@@ -27,10 +27,13 @@ void LED_Init(void)
 
 }
 
-/*
-	激光笔引脚初始化 PA9  
-	开机一直开启
-*/
+/*******************************************************************************
+* Function Name  : LASER INIT
+* Description    : CONFIGRATION LASER AND ON WHEN POWER ON
+* Input          : None 
+* Output         : None
+* Return         : None
+*******************************************************************************/
 void Laser_Init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;

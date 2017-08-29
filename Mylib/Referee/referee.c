@@ -23,7 +23,7 @@ uint8_t Tx_Buf[TX_LEN];
 uint8_t re_data[TX_LEN];
 uint8_t Flag_Uart_Busy=0;
 
-void Mainfold_Receive_Configuration(void){
+void Referee_Configuration(void){
 
 
     USART_InitTypeDef usart2;
@@ -124,7 +124,7 @@ void Mainfold_Receive_Configuration(void){
 }
 
 
-void Referee_Configuration(void)
+void Mainfold_Receive_Configuration(void)
 {
     USART_InitTypeDef usart3;
 		GPIO_InitTypeDef  gpio;
@@ -262,7 +262,7 @@ void USART3_IRQHandler(void)
 			//DMA1_Stream1->CR |= (uint32_t)(DMA_SxCR_CT);                  //enable the current selected memory is Memory 1
 			DMA_Cmd(DMA1_Stream1, ENABLE);
 		
-      // ”æﬂÃÂ–≠“È∂¯∂
+      // ”æﬂÃÂ–≠“È
 			if((Hit_rev[0]  ==  0xAA )&&(Hit_rev[2]  ==  0xAB )){
 
 //				time_count = clock_cnt - dara;

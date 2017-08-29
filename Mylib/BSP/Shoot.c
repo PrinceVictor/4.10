@@ -58,6 +58,7 @@ void Shoot_PWM_Configuration(void)   //摩擦轮初始化
 		
     TIM_Cmd(TIM5,ENABLE);
 }
+
 //反转值
 int32_t ToggleBit(int32_t dat)
 {
@@ -70,6 +71,8 @@ int32_t ToggleBit(int32_t dat)
   }
 }
 
+
+//摩擦轮控制检测
 void Detect_shoot(void)
 {
 	if( IsComputerControl == 1 )//键鼠模式
@@ -103,6 +106,8 @@ void Detect_shoot(void)
 		}
 	}
 }
+
+
 
 void Shoot_Fire(uint16_t speed)
 {

@@ -9,7 +9,7 @@
 void Load_Motor_Error_Out(void);
 
 
-
+//拨弹电机闭环参数 其中P
 struct PID_PARA Load_motor = 
 {
 	180,0,0,35,0,0   //230
@@ -148,7 +148,13 @@ void Bullet_Cap_Conf(void)//pb1  弹仓开关初始化
 
 }
 
-
+/*******************************************************************************
+* Function Name  : Load_motor_control
+* Description    : Load motor PID proccess include speed an position
+* Input          : flag  type
+* Output         : None
+* Return         : None
+*******************************************************************************/
 void Load_motor_control(uint8_t flag , uint8_t type)
 {
 	float shell_delta,shell_p_part ;
@@ -184,6 +190,12 @@ void Load_motor_control(uint8_t flag , uint8_t type)
 	Shoot_Info.speed_filter_cnt =  ( Shoot_Info.speed_filter_cnt + 1 ) % 5;
 	
 	//////////////////自制驱动
+	
+	/*************
+	这个闭环处理存在一个小问题，单发处理的时候是先处理内环位置环，后处理速度环
+	后期有时间可以改一下，参数也要重新调一下
+	**************/
+	
 		//position circle
 		if( type==1 )
 		{
@@ -204,12 +216,15 @@ void Load_motor_control(uint8_t flag , uint8_t type)
 		{
 			delta = Shoot_Info.Load_Motor_Speed_Target - Shoot_Info.Load_Motor_Speed;
 			
+	/////**这一小部分是用来判断拨弹电机是否正常工作
 			if((delta > 1)&&(Shoot_Info.load_command  == 1)&&((RC_Ctl.mouse.press_l == 1)||(RC_Ctl.rc.s1 == 1)))  {
 				Detect_Data.Load_motor_detect_Flag = 0;
 			}
 			else{
 				Detect_Data.Load_motor_detect_Flag = 1;
 			}
+			
+	/////**
 		
 }
 		p_part = delta * 5.0f * Load_motor.shell_P;//Load_motor_para.shell_P;
@@ -293,28 +308,12 @@ adds:
 */
 void Load_Motor_position_plus(uint16_t adds)
 {
-	if( adds == 0 )
-	{
-		adds = 90 ;
-	}
+
 	
 	Shoot_Info.pulse_cnt = Shoot_Info.pulse_target;
 	Shoot_Info.pulse_target += adds;
 }
 
-
-void Load_Motor_Position_plus(uint32_t adds , uint8_t delay_s)
-{
-	uint8_t i;
-	i = delay_s;
-	 Shoot_Info.pulse_cnt = Shoot_Info.pulse_target;
-	 Shoot_Info.pulse_target += adds;
-	
-	while( i-- )
-	{
-		delay_ms(1000);
-	}
-}
 
 
 void Load_Motor_Fault_detet(void)
@@ -340,14 +339,7 @@ void Load_Motor_Fault_detet(void)
 
 void Load_Motor_Error_Out(void)
 {
-	//官方驱动
-	if(  LaserAndPrep[TANK_SERIAL_NUMBER-1][5] == 0)
-	{
-		Load_motor_out(38000);
-	}
-	
-	//自制驱动
-	else if( LaserAndPrep[TANK_SERIAL_NUMBER-1][5] == 1)
+ if( LaserAndPrep[TANK_SERIAL_NUMBER-1][5] == 1)
 	{
 		Load_motor_out(350);
 	}
