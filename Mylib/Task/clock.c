@@ -74,7 +74,7 @@ void TIM8_BRK_TIM12_IRQHandler(void)
 
 		RampTFB.clock_cnt++;
 		RampTLF.clock_cnt++;
-		Move_UD.clock_cnt++;
+		Move_UD.clock_cnt++;  
 		Move_LF.clock_cnt++;
 		
 		Diy_cnt++;
@@ -101,6 +101,8 @@ void TIM8_BRK_TIM12_IRQHandler(void)
 		PowerData_Detect();
 		
 		Diy_Data_Proccess( Detect_Data ,&UserDefineData);
+		
+//连发 比赛时候临时加的 目前状态下连发3下效果最好
 	if(Detect_Data.Triple_Shoot_Flag == 1){
 			
 			if(Detect_Data.Triple_Shoot_count < 400){
@@ -132,6 +134,7 @@ void TIM8_BRK_TIM12_IRQHandler(void)
 }
 
 	
+		//核心人物
 		ControlTask(Run_state);
 
 		

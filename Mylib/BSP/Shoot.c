@@ -135,10 +135,10 @@ void Shoot_Info_Init(void)
 	
 }
 
-
+    //检测鼠标右键，按键超过1s开或关摩擦轮，并且松开之后再重新按下超过1s状态发生改变
 void Shoot_Keep(void)
 {
-    
+
     if( RC_Ctl.mouse.press_r == 1 )
     {
       if(Shoot_Info.shoot_cnt_can)
@@ -147,7 +147,7 @@ void Shoot_Keep(void)
         
         if( Shoot_Info.shoot_cnt >= 1000 )
         {
-          Shoot_Info.shoot_flag = ToggleBit(Shoot_Info.shoot_flag);
+          Shoot_Info.shoot_flag = ToggleBit(Shoot_Info.shoot_flag);  
           Shoot_Info.shoot_cnt = 0;
           Shoot_Info.shoot_cnt_can=0;
         }
