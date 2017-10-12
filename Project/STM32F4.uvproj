@@ -402,6 +402,11 @@
               <FileType>1</FileType>
               <FilePath>..\User\OtherConfig.c</FilePath>
             </File>
+            <File>
+              <FileName>ReadMe.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\ReadMe.txt</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

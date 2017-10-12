@@ -449,6 +449,10 @@ void Wheel_out_Proccess(float multiple){
 
 
 }
+
+
+
+
 float Power_P_Increase = 0.0055f,Power_P_Derease = 0.01f,Power_P = 1.05f,bas =8,divide =3,delta11111;
 void Power_Circle(uint8_t wheel_cnt ,uint8_t flag, float real_power, float reman_J ){
 
